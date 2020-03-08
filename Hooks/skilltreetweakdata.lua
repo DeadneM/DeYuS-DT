@@ -88,8 +88,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Upgrade_Skill", function(self)
 		"player_on_zipline_dodge_chance",
 		--Tank
 		"player_armor_regen_time_mul_1",
-		--"player_flashbang_multiplier_1",
-		--"player_flashbang_multiplier_2",
+		"player_flashbang_multiplier_1",
+		"player_flashbang_multiplier_2",
 		"team_armor_regen_time_multiplier",
 		"player_headshot_regen_armor_bonus_1",
 		"player_headshot_regen_armor_bonus_2",
