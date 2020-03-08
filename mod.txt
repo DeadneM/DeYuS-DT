@@ -1,0 +1,68 @@
+{
+  	"name" : "DeYuS-DT",
+    "description" : "DeYuS Data Tweak mod change some value for a different experience",
+    "author" : "DeYuS"
+	"contact" : "DeYuS on steam",
+	"version" : "1",
+	"priority" : "1",
+	"blt_version" : "2",
+	"image" : "DeYuS-DT.png",
+	"color" : "1 2 3",
+	"hooks": [
+		{ "hook_id" : "lib/tweak_data/weaponfactorytweakdata", "script_path" : "Hooks/weaponfactorytweakdata.lua" },
+		{ "hook_id" : "lib/tweak_data/weapontweakdata", "script_path" : "Hooks/weapontweakdata.lua" },
+		{ "hook_id" : "lib/tweak_data/playertweakdata", "script_path" : "Hooks/playertweakdata.lua" },
+		{ "hook_id" : "lib/tweak_data/blackmarket/projectilestweakdata", "script_path" : "Hooks/projectilestweakdata.lua" },
+		{ "hook_id" : "lib/tweak_data/tweakdata", "script_path" : "Hooks/tweakdata.lua" },
+		{ "hook_id" : "lib/tweak_data/skilltreetweakdata", "script_path" : "Hooks/skilltreetweakdata.lua" },
+		{ "hook_id" : "lib/tweak_data/upgradestweakdata", "script_path" : "Hooks/upgradestweakdata.lua" },
+		{ "hook_id" : "lib/tweak_data/guitweakdata", "script_path" : "Hooks/guitweakdata.lua" },
+		{ "hook_id" : "lib/tweak_data/crimespreetweakdata", "script_path" : "Hooks/crimespreetweakdata.lua" },
+		{ "hook_id" : "lib/tweak_data/blackmarket/meleeweaponstweakdata", "script_path" : "Hooks/meleeweaponstweakdata.lua" },
+		{ "hook_id" : "lib/units/interactions/interactionext", "script_path" : "Hooks/Interactionext.lua" },
+		{ "hook_id" : "lib/units/beings/player/states/playerstandard", "script_path" : "Hooks/playerstandard.lua" },
+		{ "hook_id" : "lib/units/beings/player/playerdamage", "script_path" : "Hooks/playerdamage.lua" },
+		{ "hook_id" : "lib/units/weapons/newraycastweaponbase", "script_path" : "Hooks/newraycastweaponbase.lua" },
+		{ "hook_id" : "lib/managers/hudmanager", "script_path" : "Hooks/hudmanager.lua" },
+		{ "hook_id" : "lib/managers/playermanager", "script_path" : "Hooks/playermanager.lua" },
+		{ "hook_id" : "lib/managers/gameplaycentralmanager", "script_path" : "Hooks/gameplaycentralmanager.lua" },
+		{ "hook_id" : "lib/managers/group_ai_states/groupaistatebesiege", "script_path" : "Hooks/groupaistatebesiege.lua" },
+		{ "hook_id" : "lib/managers/menu/menucomponentmanager", "script_path" : "Hooks/menucomponentmanager.lua" },
+		{ "hook_id" : "lib/managers/menumanager", "script_path" : "Hooks/menumanager.lua" },
+		{ "hook_id" : "lib/managers/menu/items/contractbrokerheistitem", "script_path" : "contractbrokerheistitem.lua" },
+		{ "hook_id" : "lib/managers/blackmarketmanager", "script_path" : "Hooks/blackmarketmanager.lua" },
+		{ "hook_id" : "lib/managers/chatmanager", "script_path" : "Hooks/chatmanager.lua" },
+		{ "hook_id" : "lib/managers/hud/hudlootscreen", "script_path" : "Hooks/hudlootscreen.lua" },
+		{ "hook_id" : "lib/managers/localizationmanager", "script_path" : "Hooks/localizationmanager.lua" },
+		{ "hook_id" : "lib/setups/menusetup", "script_path" : "Hooks/menusetup.lua" },
+		{ "hook_id" : "lib/states/menutitlescreenstate", "script_path" : "Hooks/menutitlescreenstate.lua" },
+		{ "hook_id" : "core/lib/managers/managerbase/coremanagerbase", "script_path" : "Graphics/PoPr.lua" },
+		{ "hook_id" : "lib/tweak_data/levelstweakdata", "script_path" : "Graphics/PoPr2.lua" },
+		{ "hook_id" : "lib/managers/mission/elementblurzone", "script_path" : "Graphics/Blur.lua" },
+		{ "hook_id" : "core/lib/managers/viewport/environment/coreenvironmentfeeder", "script_path" : "Graphics/Fog.lua" },
+        { "hook_id" : "lib/entry", "script_path" : "Graphics/Dprint.lua" },
+        { "hook_id" : "core/lib/utils/coredebug", "script_path" : "Graphics/Dprint.lua" },
+		{ "hook_id" : "lib/states/ingamewaitingforplayers", "script_path" : "ingamewaitingforplayers.lua" },
+        { "hook_id" : "lib/managers/menumanager", "script_path" : "Graphics/FPS.lua" }
+	],
+	"keybinds": [
+		{
+			"keybind_id": "Bullet_Time",
+			"name": "Bullet Time, Slow Motion 0.25 by default",
+			"description": "Start Stop Bullet Time",
+			"script_path": "Scripts/BulletTime.lua",
+			"run_in_menu": true,
+			"run_in_game": true,
+			"localized" : false
+		},
+		{
+			"keybind_id" : "stringidrevealer_toggle",
+			"name" : "[string_id Revealer] Toggle",
+			"description" : "Toggle string_id revealing (requires a manual GUI refresh)",
+			"script_path" : "Scripts/StringID.lua",
+			"run_in_menu" : true,
+			"run_in_game" : true,
+			"localized" : false
+		}
+	]
+}

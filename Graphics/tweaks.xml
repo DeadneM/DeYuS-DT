@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<tweaks>
+    <!-- SCENES FILE -->
+        <tweak name="settings/scenes" extension="scenes">
+            <search>
+                <scenes/>
+                <world/>
+                <viewport/>
+                <post_processor name="fog_processor"/> 
+            </search>
+            <target mode="attributes" multiple="true">
+                <attr name="active" value="false"/>
+            </target>
+        </tweak>
+        <tweak name="settings/scenes" extension="scenes">
+            <search>
+                <scenes/>
+                <world/>
+                <viewport/>
+                <post_processor name="hdr_post_processor"/> 
+            </search>
+            <target mode="attributes" multiple="true">
+                <attr name="active" value="false"/>
+            </target>
+        </tweak>
+    <!-- -->
+    <!-- INSTANCE STRUCTS FILE -->
+        <tweak name="settings/instance_structs" extension="atom_batcher_settings">
+            <search>
+                <instance_structs/>
+                <instance_struct instances_per_batch="50"/>
+            </search>
+            <target mode="attributes" multiple="true">
+                <!-- Seems that it can be as low as 1 and in 0 it will crash -->
+                <attr name="instances_per_batch" value="1"/>
+            </target>
+        </tweak>
+    <!-- -->
+
+    <!-- LONG BOIS -->
+ 
+    <!-- LAYERS FILE -->
+        <!-- SHADOW BUFFER -->
+        <tweak name="core/settings/layers" extension="diesel_layers">
+            <search>
+                <diesel_layers/>
+                <defined/>
+                <defined/>
+                <render_target name="shadow_depth" width="8192" height="8192"/>
+            </search>
+            <target mode="attributes" multiple="true">
+                <attr name="width" value="16"/>
+                <attr name="height" value="16"/>
+            </target>
+        </tweak>
+        <!--mid_target_1/ssao_buffer-->
+        <tweak name="core/settings/layers" extension="diesel_layers">
+            <search>
+                <diesel_layers/>
+                <render_target name="mid_target_1"/>
+            </search>
+            <target mode="attributes" multiple="true">
+                <attr name="w_scale" value="0.01"/>
+                <attr name="h_scale" value="0.01"/>
+                <attr name="own_depth_buffer" value="false"/>
+                <attr name="msaa" value="false"/>
+                <attr name="hint_needs_clearing" value="false"/>
+            </target>
+        </tweak>
+        <!--mid_target_1_b/ssao_blur-->
+        <tweak name="core/settings/layers" extension="diesel_layers">
+            <search>
+                <diesel_layers/>
+                <render_target name="mid_target_1_b"/>
+            </search>
+            <target mode="attributes" multiple="true">
+                <attr name="w_scale" value="0.01"/>
+                <attr name="h_scale" value="0.01"/>
+                <attr name="own_depth_buffer" value="false"/>
+                <attr name="msaa" value="false"/>
+                <attr name="hint_needs_clearing" value="false"/>
+            </target>
+        </tweak>
+        <!-- Removal of deferred_semi_transparent_depth layer -->
+        <tweak name="core/settings/layers" extension="diesel_layers">
+            <search>
+                <diesel_layers/>
+                <layer_setup/>
+                <defined/>
+                <layer name="deferred_semi_transparent_depth"/>
+            </search>
+            <target mode="replace"/>
+        </tweak>
+        <!-- Removal of depth_projection post processor -->
+        <tweak name="core/settings/layers" extension="diesel_layers">
+            <search>
+                <diesel_layers/>
+                <layer_setup/>
+                <defined/>
+                <post_processor name="depth_projection"/>
+            </search>
+            <target mode="replace"/>
+        </tweak>
+        <tweak name="core/settings/layers" extension="diesel_layers">
+            <search>
+                <diesel_layers/>
+                <layer_setup/>
+                <defined/>
+                <post_processor name="depth_projection"/>
+            </search>
+            <target mode="replace"/>
+        </tweak>
+    <!-- -->
+
+    <!-- POST PROCESSOR FILE -->
+        <tweak name="core/shaders/post_processor" extension="post_processor">
+            <search>
+                <?xml version="1.0" encoding="utf-8" ?>
+                <post_processor/>
+                <effect name="bloom_combine"/>
+            </search>
+            <target mode="replace">
+                <effect name="bloom_combine">
+                    <combiner diffuse_texture="contour_target" dst="bb" render_template="post_contour_mask" depth_stencil_target="scene_depth_stencil"/>
+                </effect name="bloom_combine">
+            </target>
+        </tweak>
+        <tweak name="core/shaders/post_processor" extension="post_processor">
+            <search>
+                <?xml version="1.0" encoding="utf-8" ?>
+                <post_processor/>
+                <effect name="AA_fxaa"/>
+                <defined platform="PS3 X360"/>
+            </search>
+            <target mode="attributes" multiple="true">
+                <attr name="platform" value="WIN32"/>
+            </target>
+        </tweak>
+    <!-- -->
+
+    <!-- DEFERRED POST PROCESSOR FILE -->
+        <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+            <search>
+                <?xml version="1.0" encoding="utf-8" ?>
+                <post_processor/>
+                <materials/>
+                <material/>
+                <variable name="use_ssao"/>
+            </search>
+            <target mode="attributes" multiple="true">
+                <attr name="value" value="0"/>
+            </target>
+        </tweak>
+        <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+            <search>
+                <?xml version="1.0" encoding="utf-8" ?>
+                <post_processor/>
+                <materials/>
+                <material/>
+                <variable name="fog_max_density"/>
+            </search>
+            <target mode="attributes" multiple="true">
+                <attr name="value" value="0.5"/>
+            </target>
+        </tweak>
+        <!-- Removal of many effect stuff -->
+            <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+                <search>
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <post_processor/>
+                    <effect name="albedo_visualization"/>
+                </search>
+                <target mode="replace"/>
+            </tweak>
+            <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+                <search>
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <post_processor/>
+                    <effect name="specular_visualization"/>
+                </search>
+                <target mode="replace"/>
+            </tweak>
+            <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+                <search>
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <post_processor/>
+                    <effect name="glossiness_visualization"/>
+                </search>
+                <target mode="replace"/>
+            </tweak>
+            <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+                <search>
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <post_processor/>
+                    <effect name="reflection_visualization"/>
+                </search>
+                <target mode="replace"/>
+            </tweak>
+            <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+                <search>
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <post_processor/>
+                    <effect name="normal_visualization"/>
+                </search>
+                <target mode="replace"/>
+            </tweak>
+            <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+                <search>
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <post_processor/>
+                    <effect name="depth_visualization"/>
+                </search>
+                <target mode="replace"/>
+            </tweak>
+            <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+                <search>
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <post_processor/>
+                    <effect name="ambient_visualization"/>
+                </search>
+                <target mode="replace"/>
+            </tweak>
+            <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+                <search>
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <post_processor/>
+                    <effect name="test"/>
+                </search>
+                <target mode="replace"/>
+            </tweak>
+            <tweak name="core/shaders/deferred_post_processor" extension="post_processor">
+                <search>
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <post_processor/>
+                    <effect name="debug_shadow"/>
+                </search>
+                <target mode="replace"/>
+            </tweak>
+    <!-- -->
+</tweaks>
