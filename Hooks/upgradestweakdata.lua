@@ -50,6 +50,20 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 	self.values.player.camouflage_bonus = {0.75, 0.55} --{0.85, 0.65}
 	self.values.player.stand_still_crouch_camouflage_bonus = {0.85, 0.8, 0.75} --{0.9, 0.85, 0.8}
 
+--Headshot regen armor
+	self.values.player.headshot_regen_armor_bonus = {1.5, 2.5} --{0.5, 2.5}
+	self.on_headshot_dealt_cooldown = 1 --2
+	self.on_killshot_cooldown = 1
+	self.on_damage_dealt_cooldown = 2
+
+--Faster reload
+	self.values.temporary.single_shot_fast_reload = {{1.5, 5}} --{{2, 4}}
+	self.values.temporary.reload_weapon_faster = {{1.5, 5}} --{{2, 10}}
+	self.values.player.melee_kill_increase_reload_speed = {{1.5, 5}} --{{1.5, 10}}
+
+--Faster movement
+	self.values.temporary.damage_speed_multiplier = {{1.1, 3}} --{{1.3, 5}}
+
 --Crew Upgrades
 	self.values.team.crew_add_health = {6}
 	self.values.team.crew_add_armor = {3}
@@ -70,9 +84,5 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 --Misc
 	self.values.player.damage_shake_multiplier = {0.8} --{0.5}
 	self.values.player.drill_speed_multiplier = {0.75, 0.45} --{0.85, 0.7}
-	self.values.player.headshot_regen_armor_bonus = {1.5, 2.5} --{0.5, 2.5}
-	self.on_headshot_dealt_cooldown = 1 --2
-	self.on_killshot_cooldown = 1
-	self.on_damage_dealt_cooldown = 2
 
 end)
