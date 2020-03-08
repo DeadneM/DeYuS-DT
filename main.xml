@@ -1,0 +1,5 @@
+<table name="DeYuS-DT">
+    <AssetUpdates id="DeYuS-DT" version="1">
+        <custom_provider version_api_url="https://raw.githubusercontent.com/DeadneM/DeYuS-DT/master/Version.txt" download_url="https://github.com/DeadneM/DeYuS-DT/archive/master.zip"/>
+    </AssetUpdates>
+</table>
