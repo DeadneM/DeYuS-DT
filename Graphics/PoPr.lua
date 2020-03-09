@@ -1,3 +1,5 @@
+--[[
+]]
 core:module("CoreManagerBase")
 
 ManagerBase = ManagerBase or class()
@@ -13,13 +15,17 @@ local _block_post = {
 	[Idstring("shadow_slice_overlap"):key()] = Vector3(0, 0, 0),
 	[Idstring("deferred_lighting"):key()] = Idstring("empty"),
 	[Idstring("apply_ambient"):key()] = Idstring("empty"),
-	--[Idstring("color_grading_post"):key()] = Idstring("empty"), --Filter
+	 --Filter--[Idstring("color_grading_post"):key()] = Idstring("empty"),
 	[Idstring("reflection_visualization"):key()] = Idstring("empty"),
 	[Idstring("glossiness_visualization"):key()] = Idstring("empty"),
 	[Idstring("specular_visualization"):key()] = Idstring("empty"),
 	[Idstring("rain_post_processor"):key()] = Idstring("rain_off"),
 	[Idstring("snow_post_processor"):key()] = Idstring("snow_off"),
-	[Idstring("hdr_post_processor"):key()] = Idstring("default")
+	[Idstring("hdr_post_processor"):key()] = Idstring("default"),
+	--Outlines--[Idstring("bloom_combine_post_processor"):key()] = Idstring("bloom_combine_empty"),
+	--Outlines--[Idstring("bloom_combine"):key()] = Idstring("bloom_combine_empty"),
+	[Idstring("shadow_modifier"):key()] = Idstring("empty"),
+	[Idstring("shadow_rendering"):key()] = Idstring("empty")
 }
 
 Hooks:PostHook(ManagerBase, "_prioritize_and_activate", "F_"..Idstring("PostHook:ManagerBase:_prioritize_and_activate:No Post Processing (Post Hook Function):OwO"):key(), function(self)

@@ -1,3 +1,4 @@
+--[[
 --Local TestValue
 local away_value = math.huge
 local zero_value = 0
@@ -57,7 +58,7 @@ end
 function PostEffectLightScaleFeeder:apply(handler, viewport, scene)
 	local material = handler:_get_post_processor_modifier_material(viewport, scene, ids_apply_ambient_id, ids_deferred, ids_deferred_lighting, ids_apply_ambient)
 
-	material:set_variable(ids_effect_light_scale, self._current)
+	material:set_variable(ids_effect_light_scale, zero_value)
 end
 function PostShadowSlice0Feeder:apply(handler, viewport, scene)
 	local material = handler:_get_post_processor_modifier_material(viewport, scene, ids_shadow_modifier_id, ids_shadow_processor, ids_shadow_rendering, ids_shadow_modifier)
@@ -87,13 +88,13 @@ function PostShadowSliceDepthsFeeder:apply(handler, viewport, scene)
 	local material = handler:_get_post_processor_modifier_material(viewport, scene, ids_shadow_modifier_id, ids_shadow_processor, ids_shadow_rendering, ids_shadow_modifier)
 
 	_apply_fov_ratio(self._current)
-	material:set_variable(ids_shadow_slice_depths, self._current)
+	material:set_variable(ids_shadow_slice_depths, zero_value)
 end
 function PostShadowSliceOverlapFeeder:apply(handler, viewport, scene)
 	local material = handler:_get_post_processor_modifier_material(viewport, scene, ids_shadow_modifier_id, ids_shadow_processor, ids_shadow_rendering, ids_shadow_modifier)
 
 	_apply_fov_ratio(self._current)
-	material:set_variable(ids_shadow_slice_overlap, self._current)
+	material:set_variable(ids_shadow_slice_overlap, zero_value)
 end
 
 --Effect
@@ -110,3 +111,4 @@ end
 function PostEffectBloomBlurSizeFeeder:apply(handler, viewport, scene)
 	managers.environment_controller:bloom_blur_size(zero_value, viewport)
 end
+]]

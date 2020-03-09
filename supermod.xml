@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- Graphics tweaks for heavy performance -->
 <mod>
 	<tweak definition="Graphics/tweaks.xml" />
 </mod>
