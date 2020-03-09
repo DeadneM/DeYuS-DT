@@ -1,39 +1,47 @@
 --Melee Weapon Rebalance
 Hooks:PostHook(BlackMarketTweakData, "_init_melee_weapons", "Melee_Rebalance", function(self)
+--Melee Stats Change
 	--Block some weapon buff
 	local melee_blacklist = {
 		["bm_melee_cqc"] = true,
 		["bm_melee_zeus"] = true,
 		["bm_melee_taser"] = true,
 		["bm_melee_fear"] = true,
-		["bm_melee_selfie"] = true
+		["bm_melee_selfie"] = true,
+		["bm_melee_boxing_gloves"] = true,
+		["bm_melee_tiger"] = true
 	}
 	--Do the thing
 	for _, weapon in pairs(self.melee_weapons) do
 		if weapon.stats and not melee_blacklist[weapon.name_id] then
 			weapon.stats.min_damage = weapon.stats.min_damage * 2
 			weapon.stats.max_damage = weapon.stats.max_damage * 4
+			weapon.stats.min_damage_effect = weapon.stats.min_damage_effect * 2
+			weapon.stats.max_damage_effect = weapon.stats.max_damage_effect * 2
 			weapon.stats.charge_time = weapon.stats.charge_time / 2
 		end
 		if weapon.stats and melee_blacklist[weapon.name_id] then
-			weapon.stats.min_damage = weapon.stats.min_damage_effect * 2
-			weapon.stats.max_damage = weapon.stats.max_damage_effect * 2
+			weapon.stats.min_damage = weapon.stats.min_damage * 2
+			weapon.stats.max_damage = weapon.stats.max_damage * 2
+			weapon.stats.min_damage_effect = weapon.stats.min_damage_effect * 2
+			weapon.stats.max_damage_effect = weapon.stats.max_damage_effect * 4
 			weapon.stats.charge_time = weapon.stats.charge_time / 4
 		end
+		if weapon.stats.charge_time <= 0 then
+			weapon.stats.charge_time = 0.5
+		end			
 	end
 	--Other setup and misc
 	self.melee_weapons.taser.stats.range = 300
 	self.melee_weapons.sandsteel.stats.range = 280
 	self.melee_weapons.great.stats.range = 280
-    self.melee_weapons.agave.expire_t = 0.3
+	self.melee_weapons.chef.stats.range = 180
 
-	--Animation change
-	-- Base Game --
+--Animation change
+-- Base Game --
 -- Leather Sap --
 self.melee_weapons.sap.anim_global_param = "melee_knife2"
-self.melee_weapons.sap.align_objects = {
-		"a_weapon_left"
-}
+self.melee_weapons.sap.align_objects = {"a_weapon_left"}
 
 -- DLC --
 -- Gage Weapon Pack #02 --
@@ -61,9 +69,7 @@ self.melee_weapons.branding_iron.anim_global_param = "melee_blunt"
 -- Sokol Character Pack --
 -- Hockey Stick --
 self.melee_weapons.hockey.anim_global_param = "melee_baseballbat_miami"
-self.melee_weapons.hockey.align_objects = {
-		"a_weapon_left"
-}
+self.melee_weapons.hockey.align_objects = {"a_weapon_left"}
 
 -- The Point Break Heist --
 -- Machete --
@@ -82,9 +88,7 @@ self.melee_weapons.scoutknife.anim_global_param = "melee_knife2"
 -- San martin Bank Heist --
 -- El Ritmo --
 self.melee_weapons.chac.anim_global_param = "melee_knife2"
-self.melee_weapons.chac.align_objects = {
-		"a_weapon_left"
-}
+self.melee_weapons.chac.align_objects = {"a_weapon_left"}
 
 --[[List for reason
 	Fists
