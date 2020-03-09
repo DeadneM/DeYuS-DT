@@ -22,8 +22,8 @@ local _block_post = {
 	[Idstring("rain_post_processor"):key()] = Idstring("rain_off"),
 	[Idstring("snow_post_processor"):key()] = Idstring("snow_off"),
 	[Idstring("hdr_post_processor"):key()] = Idstring("default"),
-	--Outlines--[Idstring("bloom_combine_post_processor"):key()] = Idstring("bloom_combine_empty"),
-	--Outlines--[Idstring("bloom_combine"):key()] = Idstring("bloom_combine_empty"),
+	[Idstring("bloom_combine_post_processor"):key()] = Idstring("bloom_combine_empty"),
+	[Idstring("bloom_combine"):key()] = Idstring("bloom_combine_empty"),
 	[Idstring("shadow_modifier"):key()] = Idstring("empty"),
 	[Idstring("shadow_rendering"):key()] = Idstring("empty")
 }
