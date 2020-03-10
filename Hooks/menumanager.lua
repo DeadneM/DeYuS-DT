@@ -1,3 +1,26 @@
+--FPS cap changer
+local limits = {30, 31, 45, 60, 61, 75, 76, 120}
+local modify_adv_video_actual = MenuOptionInitiator.modify_adv_video
+function MenuOptionInitiator:modify_adv_video(node, ...)
+	if limits ~= nil then
+		local fpslimit = node:item("choose_fps_cap")
+		if fpslimit ~= nil then
+			fpslimit:clear_options()
+			for __, limit in ipairs(limits) do
+				fpslimit:add_option(CoreMenuItemOption.ItemOption:new({
+					_meta = "option",
+					text_id = tostring(limit),
+					value = limit,
+					localize = false
+				}))
+			end
+			fpslimit:_show_options(nil)
+		end
+	end
+
+	return modify_adv_video_actual(self, node, ...)
+end
+
 --Hide the reset progression button in options
 local function HideClearProgressButton(menu_manager)
 	if menu_manager == nil or menu_manager._registered_menus == nil or menu_manager._registered_menus.menu_main == nil then

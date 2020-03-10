@@ -1,4 +1,4 @@
---Skip loot
+--Skip loot time
 function HUDLootScreen:begin_choose_card(peer_id, card_id)
 	if not self._peer_data[peer_id].active then
 		self._peer_data[peer_id].delayed_card_id = card_id

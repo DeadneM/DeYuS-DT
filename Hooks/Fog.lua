@@ -1,4 +1,5 @@
 --[[
+]]
 --Local TestValue
 local away_value = math.huge
 local zero_value = 0
@@ -111,4 +112,3 @@ end
 function PostEffectBloomBlurSizeFeeder:apply(handler, viewport, scene)
 	managers.environment_controller:bloom_blur_size(zero_value, viewport)
 end
-]]
