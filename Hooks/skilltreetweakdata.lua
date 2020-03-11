@@ -42,16 +42,16 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Upgrade_Skill", function(self)
 		"melee_stacking_hit_expire_t",
 		"melee_stacking_hit_damage_multiplier_1",
 		--Hacker
-		"pocket_ecm_jammer",
-		"player_pocket_ecm_jammer_base",
-		"player_pocket_ecm_heal_on_kill_1",
-		"player_pocket_ecm_kill_dodge_1",
-		"team_pocket_ecm_heal_on_kill_1",
+		-- "pocket_ecm_jammer",
+		-- "player_pocket_ecm_jammer_base",
+		-- "player_pocket_ecm_heal_on_kill_1",
+		-- "player_pocket_ecm_kill_dodge_1",
+		-- "team_pocket_ecm_heal_on_kill_1",
 		--Sicario
-		"smoke_screen_grenade",
+		-- "smoke_screen_grenade",
 		--"player_dodge_shot_gain",
 		--"player_dodge_replenish_armor",
-		"player_smoke_screen_ally_dodge_bonus",
+		-- "player_smoke_screen_ally_dodge_bonus",
 		"player_sicario_multiplier",
 		--Scarface
 		"temporary_chico_injector_1",
@@ -88,8 +88,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Upgrade_Skill", function(self)
 		"player_on_zipline_dodge_chance",
 		--Tank
 		"player_armor_regen_time_mul_1",
-		"player_flashbang_multiplier_1",
-		"player_flashbang_multiplier_2",
+		-- "player_flashbang_multiplier_1",
+		-- "player_flashbang_multiplier_2",
 		"team_armor_regen_time_multiplier",
 		"player_headshot_regen_armor_bonus_1",
 		"player_headshot_regen_armor_bonus_2",
@@ -165,9 +165,18 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Upgrade_Skill", function(self)
 		"ecm_jammer_can_open_sec_doors",
 		"ecm_jammer_quantity_increase_1",
 		--SentryGun
+		"sentry_gun_cost_reduction_1",
+		"sentry_gun_cost_reduction_2",
 		"sentry_gun_shield",
+		"sentry_gun_spread_multiplier",
+		"sentry_gun_rot_speed_multiplier",
+		"sentry_gun_extra_ammo_multiplier_1",
+		"sentry_gun_armor_multiplier",
+		"sentry_gun_ap_bullets",
+		"sentry_gun_fire_rate_reduction_1",
 		"sentry_gun_quantity_1",
 		"sentry_gun_quantity_2",
+		-- "sentry_gun_silent",
 		--CriticalDamage
 		"player_unseen_increased_crit_chance_1",
 		"player_unseen_temp_increased_crit_chance_1",
@@ -203,6 +212,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Upgrade_Skill", function(self)
 		"player_pick_lock_easy_speed_multiplier",
 		"player_pick_lock_speed_multiplier",
 		--SecondDeployable
+		"deploy_interact_faster_1",
 		"second_deployable_1",
 		--Secondarysaw
 		"saw_secondary",
@@ -211,8 +221,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Upgrade_Skill", function(self)
 		"snp_graze_damage_2",
 		--PassiveEnnemySkill
 		"temporary_single_shot_fast_reload_1",
-		"weapon_passive_armor_piercing_chance",
-		"player_ap_bullets_1",
+		-- "weapon_passive_armor_piercing_chance",
+		-- "player_ap_bullets_1",
 		"player_shield_knock",
 		"player_panic_suppression",
 		"player_armor_depleted_stagger_shot_1",
@@ -223,6 +233,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Upgrade_Skill", function(self)
 		--HealthSkill
 		"player_passive_health_regen",
 		"player_melee_life_leech",
+		"player_revive_interaction_speed_multiplier",
+		"player_morale_boost",
 		"cooldown_long_dis_revive",
 		"player_messiah_revive_from_bleed_out_1",
 		"player_recharge_messiah_1"

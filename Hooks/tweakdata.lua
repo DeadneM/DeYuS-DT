@@ -39,10 +39,6 @@ tweak_data.projectiles.wpn_prj_four.damage = 110
 
 --self.projectiles.wpn_prj_ace = {damage = 4, launch_speed = 1500, adjust_z = 0, mass_look_up_modifier = 1, name_id = "bm_prj_ace", push_at_body_index = 0, sounds = {}}
 tweak_data.projectiles.wpn_prj_ace.damage = 110
-tweak_data.projectiles.wpn_prj_ace.launch_speed = 1000
-tweak_data.projectiles.wpn_prj_ace.dot_data.type = "poison"
-tweak_data.projectiles.wpn_prj_ace.bullet_class = "ProjectilesPoisonBulletBase"
-tweak_data.projectiles.wpn_prj_ace.push_at_body_index = "dynamic_body_spinn"
 
 --self.projectiles.wpn_prj_jav = {damage = 325, launch_speed = 1500, adjust_z = 30, mass_look_up_modifier = 1, name_id = "bm_prj_jav", push_at_body_index = 0, sounds = {}}
 tweak_data.projectiles.wpn_prj_jav.damage = 650
