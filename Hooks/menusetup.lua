@@ -1,4 +1,3 @@
-
 ------------
 -- Purpose: Hooks MenuSetup:init_game() to force the game to skip the intro videos and go straight to the attract screen (as
 --          though -skip_intro had been specified on the command line)

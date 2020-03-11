@@ -1,3 +1,4 @@
+--Disable debug function
 print = function(...) end								-- Disable prints
 cat_print = function(...) end					-- CoreDebug function 
 reload_and_compile = function(...) end		-- CoreDebug function

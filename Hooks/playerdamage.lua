@@ -1,21 +1,16 @@
 --Bloody Screens part
-Hooks:PreHook( PlayerDamage , "_calc_health_damage" , "BloodyScreensPrePlayerDamageDamageCalcHealthDamage" , function( self , attack_data )
-
+Hooks:PreHook(PlayerDamage, "_calc_health_damage", "BloodyScreensPrePlayerDamageDamageCalcHealthDamage", function(self, attack_data)
 	if attack_data.variant ~= "bullet" then return end
-	
 	if self:get_real_armor() <= 0 then
-		managers.hud:spawn_blood( 8 )
+		managers.hud:spawn_blood(8)
 	end
+end)
 
-end )
-
-Hooks:PostHook( PlayerDamage , "damage_melee" , "BloodyScreensPostPlayerDamageDamageMelee" , function( self , attack_data )
-
+Hooks:PostHook(PlayerDamage, "damage_melee", "BloodyScreensPostPlayerDamageDamageMelee", function(self, attack_data)
 	if self:get_real_armor() <= 0 then
-		managers.hud:spawn_blood( 16 )
+		managers.hud:spawn_blood(16)
 	end
-
-end )
+end)
 
 --Reduced Iframe part
 function PlayerDamage:_chk_dmg_too_soon(damage, ...)

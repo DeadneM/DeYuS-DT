@@ -37,7 +37,7 @@ self.projectiles.frag_com.max_amount = 10
 self.projectiles.fir_com.max_amount = 10
 
 --Kingpin
-self.projectiles.chico_injector.base_cooldown = 60
+self.projectiles.chico_injector.base_cooldown = 120
 self.projectiles.chico_injector.max_amount = 2
 
 --Pocket Ecm

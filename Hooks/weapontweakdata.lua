@@ -9,8 +9,6 @@ self.judge.weapon_hold = "deagle"
 self.judge.animations.reload_name_id="new_raging_bull"
 self.mateba.weapon_hold = "deagle"
 self.mateba.animations.reload_name_id="mateba"
-self.plainsrider.weapon_hold = "plainsrider"
-self.plainsrider.animations.reload_name_id="long"
 -- self.packrat.weapon_hold = "deagle"
 -- self.packrat.animations.reload_name_id="packrat"
 -- self.contraband.weapon_hold = "contraband"
@@ -22,8 +20,8 @@ self.trip_mines.player_damage = 20
 self.trip_mines.damage = 600
 self.sentry_gun.DAMAGE = 60
 self.sentry_gun.SUPPRESSION = 22
-self.sentry_gun.SPREAD = 14
-self.sentry_gun.auto.fire_rate = 0.08
+self.sentry_gun.SPREAD = 20
+self.sentry_gun.auto.fire_rate = 0.5
 
 -- SMGs --
 

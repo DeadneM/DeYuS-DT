@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <mod name="DeYuS-DT" author="DeadneM" color="Color(1, 1, 1)">
 <!-- Automatic updates -->
-	<AssetUpdates id="DeYuS-DT" version="1">
+	<AssetUpdates id="DeYuS-DT" version="0">
         <custom_provider version_api_url="https://raw.githubusercontent.com/DeadneM/DeYuS-DT/master/Version.txt" download_url="https://github.com/DeadneM/DeYuS-DT/archive/master.zip"/>
     </AssetUpdates>
 <!-- Graphics tweaks -->

@@ -8,19 +8,19 @@ end)
 
 Hooks:PostHook(PlayerTweakData, "_set_normal", "COD_set_normal", function(self)
 	self.damage.MIN_DAMAGE_INTERVAL = 0.15
-	self.damage.ARMOR_INIT = 1.25
+	self.damage.ARMOR_INIT = 1
 	self.damage.HEALTH_INIT = 10
 end)
 
 Hooks:PostHook(PlayerTweakData, "_set_hard", "COD_set_hard", function(self)
 	self.damage.MIN_DAMAGE_INTERVAL = 0.15
-	self.damage.ARMOR_INIT = 1.5
+	self.damage.ARMOR_INIT = 1
 	self.damage.HEALTH_INIT = 20
 end)
 
 Hooks:PostHook(PlayerTweakData, "_set_overkill", "COD_set_overkill", function(self)
 	self.damage.MIN_DAMAGE_INTERVAL = 0.15
-	self.damage.ARMOR_INIT = 1.75
+	self.damage.ARMOR_INIT = 1
 	self.damage.HEALTH_INIT = 23
 end)
 
