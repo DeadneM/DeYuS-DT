@@ -48,7 +48,7 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 --Graze
 	self.values.snp.graze_damage = {
 		{radius = 100, damage_factor = 0.2, damage_factor_headshot = 0.2},
-		{radius = 50, damage_factor = 0.2, damage_factor_headshot = 0.8} --{radius = 100, damage_factor = 0.2, damage_factor_headshot = 1}
+		{radius = 80, damage_factor = 0.4, damage_factor_headshot = 0.8} --{radius = 100, damage_factor = 0.2, damage_factor_headshot = 1}
 	}
 
 --Dodge and Crouch
