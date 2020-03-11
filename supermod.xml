@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<!-- Graphics tweaks for heavy performance -->
-<mod>
-	<tweak definition="Hooks/tweaks.xml" />
-</mod>
