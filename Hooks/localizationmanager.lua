@@ -24,3 +24,14 @@ end
 function StringIDReveal_InChat()
 	return IsInHUDChat() or IsInLobbyChat()
 end
+
+Hooks:Add("LocalizationManagerPostInit", "[ReString]", function(loc)
+	LocalizationManager:add_localized_strings({
+		bm_menu_btn_buy_new_mask = "[+]",
+		bm_menu_btn_buy_new_weapon = "[+]",
+		bm_menu_empty_mask_slot = "[     ]",
+		bm_menu_empty_weapon_slot = "[     ]",
+		menu_crimenet_offline = "DeYuS",
+		menu_crimenet_offline_help = "My House, My Heist, My Game"
+	})
+end)
