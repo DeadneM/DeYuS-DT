@@ -37,6 +37,24 @@ function HUDManager:spawn_blood(amount)
 	end
 end
 
+--WaypointTweaks
+local WPT_duration = 1.5
+local WPT_radius = 320
+Hooks:PostHook(HUDManager, "add_waypoint", "WaypointTweaks", function(self, id, ...)
+	local hud = self._hud
+	local instance = hud.waypoints[id]
+	if instance ~= nil then
+		instance.move_speed = WPT_duration
+		instance.radius = WPT_radius
+	else
+		instance = hud.stored_waypoints[id]
+		if instance ~= nil then
+			instance.move_speed = WPT_duration
+			instance.radius = WPT_radius
+		end
+	end
+end)
+
 --Inverted flashbang hud part
 Hooks:PostHook(HUDManager, "update", "Flashbang_fix", function(self, t, dt, ...)
 	local managers = _G.managers
