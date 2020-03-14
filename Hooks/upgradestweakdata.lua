@@ -27,6 +27,12 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 	self.values.player.marked_enemy_damage_mul = 1.25 --1.15
 	self.values.player.marked_inc_dmg_distance = {{1000, 1.5}}
 
+--Trigger Happy
+	self.values.pistol.stacking_hit_damage_multiplier = {
+		{max_stacks = 1, max_time = 2, damage_bonus = 2.2},
+		{max_stacks = 4, max_time = 4, damage_bonus = 1.25} --{max_stacks = 1, max_time = 4, damage_bonus = 2.2}
+	}
+
 --Kingpin
 	self.values.temporary.chico_injector = {{0.80, 15}} --0.75 0.6
 	self.values.player.chico_injector_low_health_multiplier = {{0.15, 0.40}} --0.5 0.25

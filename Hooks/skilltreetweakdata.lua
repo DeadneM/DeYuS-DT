@@ -94,7 +94,10 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Upgrade_Skill", function(self)
 		"player_headshot_regen_armor_bonus_1",
 		"player_headshot_regen_armor_bonus_2",
 		-- "player_armor_multiplier",
-		"body_armor6"
+		"body_armor6",
+		--Trigger Happy
+		"pistol_stacking_hit_damage_multiplier_1",
+		"pistol_stacking_hit_damage_multiplier_2"
 		-- END MOD --
 	})
 	FindAndModify(expres_table, "menu_deck13_5", {
