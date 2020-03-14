@@ -25,19 +25,19 @@ Hooks:PostHook(PlayerTweakData, "_set_overkill", "COD_set_overkill", function(se
 end)
 
 Hooks:PostHook(PlayerTweakData, "_set_overkill_145", "COD_set_overkill_145", function(self)
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.ARMOR_INIT = 2
 	self.damage.HEALTH_INIT = 25
 end)
 
 Hooks:PostHook(PlayerTweakData, "_set_easy_wish", "COD_set_easy_wish", function(self)
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.ARMOR_INIT = 2
 	self.damage.HEALTH_INIT = 27
 end)
 
 Hooks:PostHook(PlayerTweakData, "_set_overkill_290", "COD_set_overkill_290", function(self)
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.ARMOR_INIT = 2
 	self.damage.HEALTH_INIT = 30
 end)
@@ -51,9 +51,9 @@ end)
 Hooks:PostHook(PlayerTweakData, "init", "COD_init", function(self)
 
 	--IMPORTANTVALUESETABOVE
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25 --0.35
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35 --0.35
 	self.damage.ARMOR_INIT = 2 --2
-	self.damage.HEALTH_INIT = 25 --23
+	self.damage.HEALTH_INIT = 23 --23
 	--THOSEVALUESARESETABOVE
 
 	--self.damage.automatic_respawn_time = 220
@@ -84,8 +84,8 @@ Hooks:PostHook(PlayerTweakData, "init", "COD_init", function(self)
 	--self.damage.INCAPACITATED_TIME = 31 --30
 	--self.damage.respawn_time_penalty = 30
 	--self.damage.base_respawn_time_penalty = 5
-	--self.damage.automatic_assault_ai_trade_time = 60 --120
-	--self.damage.automatic_assault_ai_trade_time_max = 90 --180
+	self.damage.automatic_assault_ai_trade_time = 60 --120
+	self.damage.automatic_assault_ai_trade_time_max = 120 --180
 	self.fall_health_damage = 2 --4
 	--self.fall_damage_alert_size = 250
 	--self.SUSPICION_OFFSET_LERP = 0.75
@@ -96,7 +96,7 @@ Hooks:PostHook(PlayerTweakData, "init", "COD_init", function(self)
 		intimidate_range_teammates = 100000,
 		intimidate_strength = 0.45 --0.5
 	}
-	--self.max_nr_following_hostages = 3 --1
+	self.max_nr_following_hostages = 4 --1
 	self.TRANSITION_DURATION = 0.20 --0.23
 	self.stances.default.standard.head.translation = Vector3(0, 0, 165) --Vector3(0, 0, 145)
 	self.stances.default.standard.shakers.breathing.amplitude = 0.9 --0.3
@@ -113,7 +113,7 @@ Hooks:PostHook(PlayerTweakData, "init", "COD_init", function(self)
 	-- self.movement_state.standard.movement.speed.INAIR_MAX = 170 --185
 	-- self.movement_state.standard.movement.speed.CLIMBING_MAX = 185 --200
 	-- self.movement_state.standard.movement.jump_velocity.z = 480 --470
-	self.movement_state.interaction_delay = 0.5 --1.5
+	self.movement_state.interaction_delay = 1 --1.5
 	self.movement_state.stamina.STAMINA_INIT = 100 --50
 	self.movement_state.stamina.STAMINA_REGEN_RATE = 12 --3
 	self.movement_state.stamina.STAMINA_DRAIN_RATE = 6 --2
