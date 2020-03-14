@@ -6,6 +6,7 @@ function SniperGrazeDamage:on_weapon_fired(weapon_unit, result)
 		return
 	end
 
+--Stock code start
 	-- if not weapon_unit:base():is_category("snp") then
 		-- return
 	-- end
@@ -13,6 +14,13 @@ function SniperGrazeDamage:on_weapon_fired(weapon_unit, result)
 	if weapon_unit ~= managers.player:equipped_weapon_unit() then
 		return
 	end
+--Stock code end
+
+--Modding start --Weapon category "snp", "smg", "assault_rifle", "lmg", "minigun", "bow", "saw", "shotgun"
+	if weapon_unit:base():is_category("bow", "saw", "shotgun") then
+		return
+	end
+--Modding end
 
 	if not result.hit_enemy then
 		return
