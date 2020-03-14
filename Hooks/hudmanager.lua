@@ -39,17 +39,20 @@ end
 
 --WaypointTweaks
 local WPT_duration = 1.5
-local WPT_radius = 320
+local WPT_radius = 360
+local WPT_size = Vector3(24, 24, 0)
 Hooks:PostHook(HUDManager, "add_waypoint", "WaypointTweaks", function(self, id, ...)
 	local hud = self._hud
 	local instance = hud.waypoints[id]
 	if instance ~= nil then
 		instance.move_speed = WPT_duration
+		instance.size = WPT_size
 		instance.radius = WPT_radius
 	else
 		instance = hud.stored_waypoints[id]
 		if instance ~= nil then
 			instance.move_speed = WPT_duration
+			instance.size = WPT_size
 			instance.radius = WPT_radius
 		end
 	end
