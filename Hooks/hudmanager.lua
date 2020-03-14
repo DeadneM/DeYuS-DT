@@ -38,9 +38,9 @@ function HUDManager:spawn_blood(amount)
 end
 
 --WaypointTweaks
-local WPT_duration = 1.5
+local WPT_duration = 0.5
+local WPT_size = Vector3(24, 24, 0)
 local WPT_radius = 320
-local WPT_size = Vector3(16, 16, 0)
 Hooks:PostHook(HUDManager, "add_waypoint", "WaypointTweaks", function(self, id, ...)
 	local WPT = self._hud
 	local WPT_waypoint = WPT.waypoints[id]
