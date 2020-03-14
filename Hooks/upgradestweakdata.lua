@@ -30,7 +30,7 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 --Trigger Happy
 	self.values.pistol.stacking_hit_damage_multiplier = {
 		{max_stacks = 1, max_time = 2, damage_bonus = 2.2},
-		{max_stacks = 4, max_time = 4, damage_bonus = 1.25} --{max_stacks = 1, max_time = 4, damage_bonus = 2.2}
+		{max_stacks = 3, max_time = 4, damage_bonus = 1.40} --{max_stacks = 1, max_time = 4, damage_bonus = 2.2}
 	}
 
 --Kingpin
