@@ -16,8 +16,23 @@ function SniperGrazeDamage:on_weapon_fired(weapon_unit, result)
 	end
 --Stock code end
 
---Modding start --Weapon category "snp", "smg", "assault_rifle", "lmg", "minigun", "bow", "saw", "shotgun"
-	if weapon_unit:base():is_category("bow", "saw", "shotgun") then
+--Modding start
+--[[
+grenade_launcher
+saw
+minigun
+flamethrower
+bow
+crossbow
+assault_rifle
+shotgun
+akimbo
+snp
+lmg
+smg
+pistol
+]]
+	if not weapon_unit:base():is_category("minigun", "assault_rifle", "snp", "lmg") then
 		return
 	end
 --Modding end
