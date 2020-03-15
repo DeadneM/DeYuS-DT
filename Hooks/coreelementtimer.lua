@@ -16,21 +16,19 @@ Hooks:PostHook(ElementTimer, "timer_operation_reset", "CookFaster_timer_operatio
 	end
 end)
 --Faster print
-if Global.game_settings.level_id == "pal" then
-	Hooks:PostHook(ElementTimer, "on_script_activated", "PrintFaster_HackInitTime", function(self)
-		if self._id == 102736 then
-			self:timer_operation_set_time(3)
-		end
-	end)
-	Hooks:PostHook(ElementTimer, "on_executed", "PrintFaster_HackSetTime_1", function(self)
-		if self._id == 102736 then
-			self:timer_operation_set_time(3)
-		end
-	end)
-	Hooks:PostHook(ElementTimerOperator, "on_executed", "PrintFaster_HackSetTime_2", function(self)
-		if self._id == 102737 then
-			local element = self:get_mission_element(102736)
-			element:timer_operation_set_time(3)
-		end
-	end)
-end
+Hooks:PostHook(ElementTimer, "on_script_activated", "PrintFaster_HackInitTime", function(self)
+	if Global.game_settings.level_id == "pal" and self._id == 102736 then
+		self:timer_operation_set_time(3)
+	end
+end)
+Hooks:PostHook(ElementTimer, "on_executed", "PrintFaster_HackSetTime_1", function(self)
+	if Global.game_settings.level_id == "pal" and self._id == 102736 then
+		self:timer_operation_set_time(3)
+	end
+end)
+Hooks:PostHook(ElementTimerOperator, "on_executed", "PrintFaster_HackSetTime_2", function(self)
+	if Global.game_settings.level_id == "pal" and self._id == 102737 then
+		local element = self:get_mission_element(102736)
+		element:timer_operation_set_time(3)
+	end
+end)

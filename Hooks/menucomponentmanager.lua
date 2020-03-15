@@ -1,5 +1,6 @@
 --Hide rectangle info on main menu
-MenuComponentManager.create_new_heists_gui = function(self, node) return end
+--Use mainmenustreamliner
+--MenuComponentManager.create_new_heists_gui = function(self, node) return end
 --MenuComponentManager._create_player_profile_gui = function(self, node) return end
 --MenuComponentManager.Holo:Post(BLTNotificationsGui) = function(self) return end
 
