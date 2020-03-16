@@ -36,6 +36,7 @@
 		{ "hook_id" : "lib/managers/blackmarketmanager", "script_path" : "Hooks/blackmarketmanager.lua" },
 		{ "hook_id" : "lib/managers/chatmanager", "script_path" : "Hooks/chatmanager.lua" },
 		{ "hook_id" : "lib/managers/hud/hudlootscreen", "script_path" : "Hooks/hudlootscreen.lua" },
+        { "hook_id" : "lib/managers/hud/hudblackscreen", "script_path" : "Hooks/hudblackscreen.lua" },
 		{ "hook_id" : "lib/managers/localizationmanager", "script_path" : "Hooks/localizationmanager.lua" },
 		{ "hook_id" : "lib/setups/menusetup", "script_path" : "Hooks/menusetup.lua" },
 		{ "hook_id" : "lib/states/menutitlescreenstate", "script_path" : "Hooks/menutitlescreenstate.lua" },
