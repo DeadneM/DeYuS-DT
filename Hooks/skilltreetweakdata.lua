@@ -224,10 +224,11 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Upgrade_Skill", function(self)
 		"snp_graze_damage_2",
 		--PassiveEnnemySkill
 		"temporary_single_shot_fast_reload_1",
-		-- "weapon_passive_armor_piercing_chance",
+		"weapon_passive_armor_piercing_chance",
 		-- "player_ap_bullets_1",
 		"player_shield_knock",
 		"player_panic_suppression",
+		"player_killshot_close_panic_chance",
 		"player_armor_depleted_stagger_shot_1",
 		"player_armor_depleted_stagger_shot_2",
 		"player_taser_malfunction",
