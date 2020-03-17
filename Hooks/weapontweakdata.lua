@@ -695,7 +695,7 @@ self.contraband.can_shoot_through_enemy = true
 self.contraband.can_shoot_through_shield = false
 self.contraband.can_shoot_through_wall = true
 self.contraband.stats_modifiers = {damage = 2}
-self.contraband.AMMO_PICKUP = {1, 2}
+self.contraband.AMMO_PICKUP = {0.5, 1}
 self.contraband.FIRE_MODE = "auto"
 self.contraband.kick = {standing = { 1.8, 1.8, -0.3, 0.3 } }
 self.contraband.kick.crouching = { 1.6, 1.6, -0.2, 0.2 }
