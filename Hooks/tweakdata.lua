@@ -49,18 +49,18 @@ tweak_data.projectiles.wpn_prj_hur.damage = 220
 --self.projectiles.wpn_prj_target = {damage = 110, launch_speed = 1000, adjust_z = 120, mass_look_up_modifier = 1, name_id = "bm_prj_target", push_at_body_index = "dynamic_body_spinn", sounds = {}}
 tweak_data.projectiles.wpn_prj_target.damage = 220
 
-tweak_data.projectiles.launcher_frag.damage = 72
-tweak_data.projectiles.launcher_frag.player_damage = 24
-tweak_data.projectiles.launcher_m203.damage = 72
-tweak_data.projectiles.launcher_m203.player_damage = 24
-tweak_data.projectiles.launcher_frag_m32.damage = 72
-tweak_data.projectiles.launcher_frag_m32.player_damage = 24
-tweak_data.projectiles.launcher_frag_china.damage = 72
-tweak_data.projectiles.launcher_frag_china.player_damage = 24
-tweak_data.projectiles.launcher_frag_slap.damage = 72
-tweak_data.projectiles.launcher_frag_slap.player_damage = 24
-tweak_data.projectiles.launcher_frag_arbiter.damage = 45
-tweak_data.projectiles.launcher_frag_arbiter.player_damage = 15
+tweak_data.projectiles.launcher_frag.damage = 80
+tweak_data.projectiles.launcher_frag.player_damage = 40
+tweak_data.projectiles.launcher_m203.damage = 120
+tweak_data.projectiles.launcher_m203.player_damage = 80
+tweak_data.projectiles.launcher_frag_m32.damage = 80
+tweak_data.projectiles.launcher_frag_m32.player_damage = 40
+tweak_data.projectiles.launcher_frag_china.damage = 80
+tweak_data.projectiles.launcher_frag_china.player_damage = 40
+tweak_data.projectiles.launcher_frag_slap.damage = 80
+tweak_data.projectiles.launcher_frag_slap.player_damage = 40
+tweak_data.projectiles.launcher_frag_arbiter.damage = 60
+tweak_data.projectiles.launcher_frag_arbiter.player_damage = 30
 
 tweak_data.projectiles.launcher_incendiary.damage = 5
 tweak_data.projectiles.launcher_incendiary.fire_dot_data = {

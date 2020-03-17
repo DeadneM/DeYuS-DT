@@ -19,9 +19,9 @@ self.mateba.animations.reload_name_id="mateba"
 self.trip_mines.player_damage = 20
 self.trip_mines.damage = 600
 self.sentry_gun.DAMAGE = 60
-self.sentry_gun.SUPPRESSION = 22
-self.sentry_gun.SPREAD = 20
-self.sentry_gun.auto.fire_rate = 0.5
+-- self.sentry_gun.SUPPRESSION = 22
+-- self.sentry_gun.SPREAD = 20
+-- self.sentry_gun.auto.fire_rate = 0.5
 
 -- SMGs --
 
@@ -703,7 +703,7 @@ self.contraband.kick.steelsight = { 1.6, 1.6, -0.1, 0.1 }
 
 self.contraband_m203.CLIP_AMMO_MAX = 1
 self.contraband_m203.AMMO_MAX = 3
-self.contraband_m203.stats.damage = 2600
+self.contraband_m203.stats.damage = 600
 self.contraband_m203.stats.spread = 12
 self.contraband_m203.stats.recoil = 6
 self.contraband_m203.stats.suppression = 8
