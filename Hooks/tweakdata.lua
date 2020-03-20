@@ -51,7 +51,7 @@ tweak_data.projectiles.wpn_prj_target.damage = 220
 
 tweak_data.projectiles.launcher_frag.damage = 80
 tweak_data.projectiles.launcher_frag.player_damage = 40
-tweak_data.projectiles.launcher_m203.damage = 120
+tweak_data.projectiles.launcher_m203.damage = 360
 tweak_data.projectiles.launcher_m203.player_damage = 80
 tweak_data.projectiles.launcher_frag_m32.damage = 80
 tweak_data.projectiles.launcher_frag_m32.player_damage = 40

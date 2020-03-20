@@ -7,16 +7,10 @@ self.pl14.weapon_hold = "deagle"
 self.pl14.animations.reload_name_id="colt_1911"
 self.judge.weapon_hold = "deagle"
 self.judge.animations.reload_name_id="new_raging_bull"
-self.mateba.weapon_hold = "deagle"
-self.mateba.animations.reload_name_id="mateba"
--- self.packrat.weapon_hold = "deagle"
--- self.packrat.animations.reload_name_id="packrat"
--- self.contraband.weapon_hold = "contraband"
--- self.contraband.animations.reload_name_id="tti"
 
 -- Equipements --
 
-self.trip_mines.player_damage = 20
+self.trip_mines.player_damage = 60
 self.trip_mines.damage = 600
 self.sentry_gun.DAMAGE = 60
 -- self.sentry_gun.SUPPRESSION = 22
@@ -703,7 +697,7 @@ self.contraband.kick.steelsight = { 1.6, 1.6, -0.1, 0.1 }
 
 self.contraband_m203.CLIP_AMMO_MAX = 1
 self.contraband_m203.AMMO_MAX = 3
-self.contraband_m203.stats.damage = 600
+self.contraband_m203.stats.damage = 150
 self.contraband_m203.stats.spread = 12
 self.contraband_m203.stats.recoil = 6
 self.contraband_m203.stats.suppression = 8
@@ -2315,7 +2309,7 @@ self.x_beer.kick.steelsight = { 0.6, 0.6, -0.3, 0.3 }
 
 self.stech.CLIP_AMMO_MAX = 20
 self.stech.AMMO_MAX = 180
-self.stech.stats.damage = 39
+self.stech.stats.damage = 41
 self.stech.stats.spread = 15
 self.stech.stats.spread_moving = 13
 self.stech.stats.recoil = 20
@@ -2328,7 +2322,7 @@ self.stech.kick.steelsight = { 0.4, 0.4, -0.4, 0.4 }
 
 self.x_stech.CLIP_AMMO_MAX = 40
 self.x_stech.AMMO_MAX = 360
-self.x_stech.stats.damage = 39
+self.x_stech.stats.damage = 41
 self.x_stech.stats.spread = 15
 self.x_stech.stats.spread_moving = 13
 self.x_stech.stats.recoil = 20
