@@ -827,6 +827,185 @@ table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_upg_m4_g_hgrip")
 table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_upg_ass_m4_lower_reciever_core")
 table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_ass_l85a2_m_emag")
 
+--No sight part
+local sightid = {"wpn_fps_upg_o_no", "wpn_fps_upg_o_no"}
+for _, sight_id in ipairs(sightid) do
+	self.wpn_fps_ass_amcar.adds[sight_id] = {
+		"wpn_fps_m4_upper_reciever_round_vanilla",
+		"wpn_fps_m4_uupg_draghandle_vanilla",
+		"wpn_fps_m4_uupg_fg_rail_ext"
+	}
+	self.wpn_fps_smg_erma.adds[sight_id] = {
+		"wpn_fps_smg_erma_extra_rail"
+	}
+	self.wpn_fps_ass_ching.adds[sight_id] = {
+		"wpn_fps_ak_extra_ris"
+	}
+	self.wpn_fps_gre_slap.adds[sight_id] = {
+		"wpn_fps_gre_slap_o_adapter"
+	}
+	self.wpn_fps_ass_74.adds[sight_id] = {
+		"wpn_fps_ak_extra_ris"
+	}
+	self.wpn_fps_ass_akm.adds[sight_id] = {
+		"wpn_fps_ak_extra_ris"
+	}
+	self.wpn_fps_ass_akm_gold.adds[sight_id] = {
+		"wpn_fps_ak_extra_ris"
+	}
+	self.wpn_fps_shot_saiga.adds[sight_id] = {
+		"wpn_fps_ak_extra_ris"
+	}
+	self.wpn_fps_shot_r870.adds[sight_id] = {
+		"wpn_fps_shot_r870_ris_special"
+	}
+	self.wpn_fps_shot_r870.adds[sight_id] = {
+		"wpn_fps_shot_r870_ris_special"
+	}
+	self.wpn_fps_shot_serbu.adds[sight_id] = {
+		"wpn_fps_shot_r870_ris_special"
+	}
+	self.wpn_fps_smg_akmsu.adds[sight_id] = {
+		"wpn_fps_ak_extra_ris"
+	}
+	self.wpn_fps_ass_ak5.adds[sight_id] = {
+		"wpn_fps_ass_ak5_body_rail"
+	}
+	self.wpn_fps_smg_mp5.adds[sight_id] = {
+		"wpn_fps_smg_mp5_body_rail"
+	}
+	self.wpn_fps_smg_mac10.adds[sight_id] = {
+		"wpn_fps_smg_mac10_body_ris_special"
+	}
+	self.wpn_fps_smg_m45.adds[sight_id] = {
+		"wpn_fps_shot_r870_ris_special"
+	}
+	self.wpn_fps_ass_scar.adds[sight_id] = {
+		"wpn_fps_ass_scar_o_flipups_down"
+	}
+	self.wpn_fps_pis_rage.adds[sight_id] = {
+		"wpn_fps_pis_rage_o_adapter"
+	}
+	self.wpn_fps_pis_deagle.adds[sight_id] = {
+		"wpn_fps_pis_rage_o_adapter"
+	}
+	self.wpn_fps_smg_scorpion.adds[sight_id] = {
+		"wpn_fps_smg_scorpion_extra_rail"
+	}
+	self.wpn_fps_smg_tec9.adds[sight_id] = {
+		"wpn_fps_shot_r870_ris_special"
+	}
+	self.wpn_fps_smg_uzi.adds[sight_id] = {
+		"wpn_fps_shot_r870_ris_special"
+	}
+	self.wpn_fps_pis_judge.adds[sight_id] = {
+		"wpn_fps_pis_rage_o_adapter"
+	}
+	self.wpn_fps_ass_g3.adds[sight_id] = {
+		"wpn_fps_ass_g3_body_rail"
+	}
+	self.wpn_fps_ass_galil.adds[sight_id] = {
+		"wpn_fps_shot_r870_ris_special"
+	}
+	self.wpn_fps_ass_famas.adds[sight_id] = {
+		"wpn_fps_ass_famas_o_adapter"
+	}
+	self.wpn_fps_sho_spas12.adds[sight_id] = {
+		"wpn_fps_shot_r870_ris_special"
+	}
+	self.wpn_fps_smg_sterling.adds[sight_id] = {
+		"wpn_fps_smg_sterling_o_adapter"
+	}
+	self.wpn_fps_snp_mosin.adds[sight_id] = {
+		"wpn_fps_snp_mosin_rail"
+	}
+	self.wpn_fps_smg_thompson.adds[sight_id] = {
+		"wpn_fps_smg_thompson_o_adapter"
+	}
+	self.wpn_fps_rpg7.adds[sight_id] = {
+		"wpn_fps_rpg7_sight_adapter"
+	}
+	self.wpn_fps_sho_aa12.adds[sight_id] = {
+		"wpn_fps_sho_aa12_body_rail"
+	}
+	self.wpn_fps_snp_model70.adds[sight_id] = {
+		"wpn_fps_snp_model70_o_rail"
+	}
+	self.wpn_fps_smg_sr2.adds[sight_id] = {
+		"wpn_fps_smg_sr2_o_rail"
+	}
+	self.wpn_fps_smg_cobray.adds[sight_id] = {
+		"wpn_fps_smg_cobray_o_adapter"
+	}
+	self.wpn_fps_ass_asval.adds[sight_id] = {
+		"wpn_fps_ass_asval_scopemount"
+	}
+	self.wpn_fps_ass_sub2000.adds[sight_id] = {
+		"wpn_fps_ass_sub2000_o_adapter"
+	}
+	self.wpn_fps_snp_siltstone.adds[ sight_id ] = {
+		"wpn_fps_snp_siltstone_o_scopemount"
+	}
+	self.wpn_fps_smg_coal.adds[ sight_id ] = {
+		"wpn_fps_smg_coal_o_scopemount_standard"
+	}
+	self.wpn_fps_pis_deagle.override[sight_id] = {
+		a_obj = "a_quite"
+	}
+	self.wpn_fps_sho_ksg.override[sight_id] = {
+		override = {
+			wpn_fps_upg_fl_ass_smg_sho_peqbox = {a_obj = "a_fl_2"},
+			wpn_fps_upg_fl_ass_laser = {a_obj = "a_fl_2"},
+			wpn_fps_upg_fl_ass_peq15 = {a_obj = "a_fl_2"}
+		},
+		forbids = {"wpn_fps_addon_ris"}
+	}
+	self.wpn_fps_ass_sub2000.override[sight_id] = {
+		parent = "foregrip"
+	}
+	self.parts.wpn_upg_ak_fg_standard.override[sight_id] = {
+		a_obj = "a_of"
+	}
+	self.parts.wpn_upg_ak_fg_standard_gold.override[sight_id] = {
+		a_obj = "a_of"
+	}
+	self.parts.wpn_fps_smg_akmsu_fg_standard.override[sight_id] = {
+		a_obj = "a_of"
+	}
+	self.parts.wpn_upg_saiga_fg_standard.override[sight_id] = {
+		a_obj = "a_of"
+	}
+	self.parts.wpn_fps_ass_galil_fg_fab.override[sight_id] = {a_obj = "a_os_fab", stance_mod = {
+		wpn_fps_ass_galil = {translation = Vector3(0, 0, -3.5)}}
+	}
+	self.parts.wpn_fps_ass_galil_fg_mar.override[sight_id] = {a_obj = "a_os_mar", stance_mod = {
+		wpn_fps_ass_galil = {translation = Vector3(0, -8, -2.2)}}
+	}
+	self.parts.wpn_fps_upg_ak_fg_krebs.override[sight_id] = {a_obj = "a_o_krebs", stance_mod = {
+		wpn_fps_ass_74 = {translation = Vector3(0, 0, -3.8)},
+		wpn_fps_ass_akm = {translation = Vector3(0, 0, -3.8)},
+		wpn_fps_ass_akm_gold = {translation = Vector3(0, 0, -3.8)}}
+	}
+	self.parts.wpn_fps_upg_ak_fg_trax.override[sight_id] = {a_obj = "a_o_krebs", stance_mod = {
+		wpn_fps_ass_74 = {translation = Vector3(0, 0, -3.8)},
+		wpn_fps_ass_akm = {translation = Vector3(0, 0, -3.8)},
+		wpn_fps_ass_akm_gold = {translation = Vector3(0, 0, -3.8)}}
+	}
+	self.parts.wpn_fps_upg_ak_fg_zenit.override[sight_id] = {a_obj = "a_o_zenit", stance_mod = {
+		wpn_fps_smg_akmsu = {translation = Vector3(0, 0, -3.3)}}
+	}
+	self.parts.wpn_fps_upg_o_ak_scopemount.override[sight_id] = {a_obj = "a_o_sm", stance_mod = {
+		wpn_fps_ass_74 = {translation = Vector3(0, 0, -4.6)},
+		wpn_fps_ass_akm = {translation = Vector3(0, 0, -4.6)},
+		wpn_fps_ass_akm_gold = {translation = Vector3(0, 0, -4.6)},
+		wpn_fps_shot_saiga = {translation = Vector3(0, 0, -4.6)},
+		wpn_fps_smg_akmsu = {translation = Vector3(-0.028, 0, -4.36)}}
+	}
+	self.parts.wpn_fps_upg_o_m14_scopemount.override[sight_id] = {a_obj = "a_o_sm", stance_mod = {
+		wpn_fps_ass_m14 = {translation = Vector3(-0.03, 0, -5.21)}}
+	}
+end
+
 end)
 
 --Bonus restriction removal

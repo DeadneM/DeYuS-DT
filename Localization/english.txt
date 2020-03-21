@@ -1,6 +1,7 @@
 {
     "bm_w_nothing" : "No Weapon",
     "bm_w_nothing2" : "No Weapon",
-	
 	"menu_l_global_value_nothing" : "This is nothing!"
+    "bm_wp_wpn_fps_upg_o_no" : "No Sight + Rail"
+	"bm_wp_wpn_fps_upg_o_no2" : "No Sight"
 }
