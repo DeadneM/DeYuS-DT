@@ -1,0 +1,9 @@
+<unit type="wpn" slot="1" >
+	<object file="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2" />
+    <extensions>
+        <extension name="unit_data" class="ScriptUnitData" />
+        <extension name="base" class="NewRaycastWeaponBase" >
+			<var name="name_id" value="nothing2" />
+		</extension>
+    </extensions>
+</unit>

@@ -1,0 +1,6 @@
+{
+    "bm_w_nothing" : "No Weapon",
+    "bm_w_nothing2" : "No Weapon",
+	
+	"menu_l_global_value_nothing" : "This is nothing!"
+}

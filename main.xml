@@ -1,7 +1,99 @@
 <?xml version="1.0"?>
-<mod name="DeYuS-DT" author="DeadneM" color="Color(0, 0, 0)">
+<mod name="DeYuS-DT" author="DeadneM" image="guis/nothing" color="Color(0, 0, 0)">
 <!-- Automatic updates -->
 	<AssetUpdates id="DeYuS-DT" version="1">
         <custom_provider version_api_url="https://raw.githubusercontent.com/DeadneM/DeYuS-DT/master/Version.txt" download_url="https://github.com/DeadneM/DeYuS-DT/archive/master.zip"/>
     </AssetUpdates>
+	<Localization directory="Localization" default="english.txt"/>
+<!--No Weapon start part -->
+    <GlobalValue id="nothing" color="Color(1, 1, 1)"/>
+	<WeaponMod id="wpn_fps_pis_nothing_body_standard" based_on="wpn_fps_m4_lower_reciever" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" type="lower_reciever" drop="false" is_a_unlockable="false">
+	 <stats concealment="10" damage="-10" recoil="-24" spread="-24"/>
+	</WeaponMod>
+	<Weapon unlock_level="0">
+		<weapon id="nothing" based_on="glock_17" CLIP_AMMO_MAX="0" NR_CLIPS_MAX="1" texture_bundle_folder="mods" global_value="nothing">
+			<stats damage="1" spread="0" recoil="0"concealment="30" alert_size="999" suppression="30" zoom="0"/>
+			<categories>
+				<value_node value="grenade_launcher"/>
+			</categories>
+			<AMMO_PICKUP>
+				<value_node value="0"/>
+				<value_node value="0"/>
+			</AMMO_PICKUP>
+			<timers reload_not_empty="0" reload_empty="0" unequip="0" equip="0"/>
+			<fire_mode_data fire_rate="10000"/>
+			<sounds dryfire="false" enter_steelsight="false" leave_steelsight="false"/>
+		</weapon>
+		<factory id="wpn_fps_pis_nothing" unit="units/mods/weapons/wpn_fps_pis_nothing/wpn_fps_pis_nothing">
+			<optional_types>
+				<value_node value="gadget"/>
+				<value_node value="sight"/>
+			</optional_types>
+			<default_blueprint>
+			    <value_node value="wpn_fps_pis_nothing_body_standard"/> 
+			</default_blueprint>
+			<uses_parts>
+		     	<value_node value="wpn_fps_pis_nothing_body_standard"/> 
+			</uses_parts>
+		</factory>
+		<stance>
+			<standard>
+				<shoulders rotation="0 -0 0 -1" translation="0 999999999 0"/>
+			</standard>
+			<crouched>
+				<shoulders rotation="0 -0 0 -1" translation="0 999999999 0"/>
+			</crouched>
+			<steelsight>
+				<shoulders rotation="0 -0 0 -1" translation="0 999999999 0"/>
+			</steelsight>
+		</stance>
+	</Weapon>
+	<Weapon unlock_level="0">
+		<weapon id="nothing2" based_on="amcar" CLIP_AMMO_MAX="0" NR_CLIPS_MAX="1" texture_bundle_folder="mods" global_value="nothing">
+			<stats damage="1" spread="0" recoil="0"concealment="30" alert_size="999" suppression="30" zoom="0"/>
+			<categories>
+				<value_node value="grenade_launcher"/>
+			</categories>
+			<AMMO_PICKUP>
+				<value_node value="0"/>
+				<value_node value="0"/>
+			</AMMO_PICKUP>
+			<timers reload_not_empty="0" reload_empty="0" unequip="0" equip="0"/>
+			<fire_mode_data fire_rate="10000"/>
+			<sounds dryfire="false" enter_steelsight="false" leave_steelsight="false"/>
+		</weapon>
+		<factory id="wpn_fps_ass_nothing2" unit="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2">
+			<optional_types>
+				<value_node value="gadget"/>
+				<value_node value="sight"/>
+			</optional_types>
+			<default_blueprint>
+			    <value_node value="wpn_fps_pis_nothing_body_standard"/> 
+			</default_blueprint>
+			<uses_parts>
+		     	<value_node value="wpn_fps_pis_nothing_body_standard"/> 
+			</uses_parts>
+		</factory>
+		<stance>
+			<standard>
+				<shoulders rotation="0 -0 0 -1" translation="0 999999999 0"/>
+			</standard>
+			<crouched>
+				<shoulders rotation="0 -0 0 -1" translation="0 999999999 0"/>
+			</crouched>
+			<steelsight>
+				<shoulders rotation="0 -0 0 -1" translation="0 999999999 0"/>
+			</steelsight>
+		</stance>
+	</Weapon>
+<!--No Weapon end part -->
+	<AddFiles directory="assets">
+		<texture path="guis/nothing"/>
+<!--No Weapon start part -->
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_pis_nothing/wpn_fps_pis_nothing"/>
+		<unit_mat_cc path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/nothing"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/nothing2"/>
+<!--No Weapon end part -->
+	</AddFiles>
 </mod>
