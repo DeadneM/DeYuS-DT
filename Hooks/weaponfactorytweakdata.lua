@@ -3,6 +3,8 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "Weapon_Attachement", function(se
 
 			--ValueEdit--
 --Barrels
+self.parts.wpn_fps_upg_g36_fg_long.stats = 						{ value = 4, damage = 88, spread = 4, recoil = -4, total_ammo_mod = -7, concealment = -4 } -- JP36 Long Forgrip
+self.parts.wpn_fps_upg_g36_fg_long.custom_stats = 				{ ammo_pickup_max_mul = 1, ammo_pickup_min_mul = 0.5 }
 self.parts.wpn_fps_m4_uupg_b_long.stats = 						{ value = 2, damage = 4, spread = 1, spread_moving = 1, recoil = -1, concealment = -2 }	-- Long Barrel
 self.parts.wpn_fps_upg_ass_m4_b_beowulf.stats =					{ value = 4, damage = 88, spread = 4, recoil = -4, total_ammo_mod = -7, concealment = -4 }	-- DMR Barrel
 self.parts.wpn_fps_upg_ass_m4_b_beowulf.custom_stats =			{ ammo_pickup_max_mul = 1, ammo_pickup_min_mul = 0.5 }
@@ -13,7 +15,6 @@ self.parts.wpn_fps_upg_ass_ak_b_zastava.custom_stats =			{ ammo_pickup_max_mul =
 self.parts.wpn_fps_ass_g3_b_short.stats = 						{ value = 2, damage = -15, extra_ammo = 5, total_ammo_mod = 16, spread = -2, spread_moving = -1, recoil = 2, concealment = 4 }
 self.parts.wpn_fps_pis_c96_b_long.stats = 						{ value = 2, damage = 30, extra_ammo = 0, total_ammo_mod = -5, spread = 2, recoil = 0, concealment = -6 }
 self.parts.wpn_fps_lmg_hk21_b_long.stats = 						{ damage = 2, spread = 1, recoil = -2, concealment = -1 }
-self.parts.wpn_fps_upg_g36_fg_long.stats = 						{ damage = 1, spread = 2, recoil = -2, concealment = -3 }
 self.parts.wpn_fps_lmg_rpk_fg_standard.stats = 					{ spread = 2, recoil = -1, concealment = 1 }
 self.parts.wpn_fps_lmg_m249_b_long.stats = 						{ spread = 1, spread_moving = 1, recoil = -1, concealment = -1 }
 self.parts.wpn_fps_lmg_m249_fg_mk46.stats = 					{ recoil = 1, concealment = 1 }
@@ -140,7 +141,7 @@ self.parts.wpn_fps_sho_striker_b_suppressed.stats = 			{ alert_size = 12, recoil
 self.parts.wpn_fps_smg_schakal_ns_silencer.stats = 				{ alert_size = 12, recoil = 4, spread = 2, concealment = -2, suppression = 5 }
 
 --Magazine
-self.parts.wpn_fps_m4_uupg_m_std.stats = 						{ value = 2, extra_ammo = 5, spread = 0, recoil = 0, concealment = -1, reload = 1 }		-- Milspec Mag.
+self.parts.wpn_fps_m4_uupg_m_std.stats = 						{ value = 2, extra_ammo = 0, spread = 0, recoil = 0, concealment = -1, reload = 1 }		-- Milspec Mag.
 self.parts.wpn_fps_upg_m4_m_quad.stats = 						{ value = 2, extra_ammo = 15, spread = -1, recoil = 0, concealment = -3, reload = -2 }		-- CAR Quadstacked Mag
 self.parts.wpn_fps_upg_m4_m_straight.stats = 					{ value = 2, extra_ammo = -5, spread = 0, recoil = 0, concealment = 1, reload = 2 }		-- Vintage Mag.
 self.parts.wpn_fps_upg_m4_m_pmag.stats = 						{ value = 2, extra_ammo = 2, spread = 0, recoil = 0, concealment = 0, reload = 0 }			-- Tactical Mag.
@@ -251,8 +252,8 @@ self.parts.wpn_fps_upg_o_45iron.stats = 						{ value = 1, damage = 0, spread = 
 self.parts.wpn_fps_upg_o_45steel.stats = 						{ value = 1, damage = 0, spread = 0, recoil = 0, gadget_zoom = 1, concealment = 0 }		-- 45 degree Iron Sights
 self.parts.wpn_fps_upg_o_45rds.stats = 							{ value = 1, damage = 0, spread = 0, recoil = 0, gadget_zoom = 1, concealment = -1 }		-- 45 degree red-dot sight
 self.parts.wpn_fps_upg_o_45rds_v2.stats = 						{ value = 1, damage = 0, spread = 0, recoil = 0, gadget_zoom = 1, concealment = -1 }		-- Riktpunk 45 degree Sight
-self.parts.wpn_fps_upg_o_xpsg33_magnifier.stats = 				{ value = 1, damage = 0, spread = 1, recoil = 1, gadget_zoom = 9, concealment = -2 }		-- Riktpunkt Magnifier Gadget
-self.parts.wpn_fps_upg_o_sig.stats = 							{ value = 1, damage = 0, spread = 1, recoil = 1, gadget_zoom = 9, concealment = -2 }		-- Signature Magnifier Gadget
+self.parts.wpn_fps_upg_o_xpsg33_magnifier.stats = 				{ value = 1, damage = 0, spread = 1, recoil = 1, gadget_zoom = 8, concealment = -2 }		-- Riktpunkt Magnifier Gadget
+self.parts.wpn_fps_upg_o_sig.stats = 							{ value = 1, damage = 0, spread = 1, recoil = 1, gadget_zoom = 8, concealment = -2 }		-- Signature Magnifier Gadget
 self.parts.wpn_fps_upg_fl_pis_tlr1.stats = 						{ value = 1, damage = 0, spread = 0, recoil = 0, concealment = -1 }		-- Tactical Pistol Light
 self.parts.wpn_fps_upg_fl_pis_laser.stats = 					{ value = 1, damage = 0, spread = 0, recoil = 0, concealment = -1 }		-- Pocket Laser
 self.parts.wpn_fps_upg_fl_pis_crimson.stats = 					{ value = 1, damage = 0, spread = 0, recoil = 0, concealment = -1 }		-- Micro Laser
@@ -263,7 +264,7 @@ self.parts.wpn_fps_upg_fl_pis_m3x.stats = 						{ value = 1, damage = 0, spread 
 self.parts.wpn_fps_sho_boot_body_exotic.stats = 				{ value = 2, damage = 8, spread = 1, spread_moving = 1, recoil = 2, concealment = 0 }
 self.parts.wpn_fps_lmg_hk21_g_ergo.stats = 						{ value = 2, recoil = 1, spread = 1, concealment = -1 }
 self.parts.wpn_upg_ak_s_psl.stats = 							{ value = 4, spread = 3,recoil = 1, spread_moving = -3, concealment = -5 }
-self.parts.wpn_fps_upg_ak_s_solidstock.stats = 					{ value = 3,recoil = 3, spread_moving = -2, concealment = -2 }
+self.parts.wpn_fps_upg_ak_s_solidstock.stats = 					{ value = 3, recoil = 3, spread_moving = -2, concealment = -2 }
 self.parts.wpn_fps_lmg_rpk_s_standard.stats = 					{ value = 3, spread = 2, concealment = -4 }
 self.parts.wpn_fps_smg_olympic_fg_railed.stats = 				{ value = 3, spread_moving = -1, recoil = 1, concealment = 1 }
 self.parts.wpn_fps_m4_uupg_fg_lr300.stats = 					{ value = 3, spread_moving = 1, recoil = 3, concealment = 2 }
@@ -281,6 +282,7 @@ self.parts.wpn_fps_m4_upper_reciever_edge.stats = 				{ value = 4, damage = 1, s
 self.parts.wpn_fps_upg_ass_m4_upper_reciever_ballos.stats = 	{ value = 4, damage = 1, spread = -1, recoil = 1, concealment = 0 }			-- LW Upper Receiver
 self.parts.wpn_fps_upg_ass_m4_upper_reciever_core.stats = 		{ value = 4, damage = 1, spread = -2, recoil = 2, concealment = 0 }			-- THRUST Upper Receiver
 self.parts.wpn_fps_upg_bp_lmg_lionbipod.stats = 				{ value = 3, damage = 0, spread = 0, recoil = 0, concealment = -2 }			-- Lion Bipod
+self.parts.wpn_fps_snp_mosin_ns_bayonet.stats = 				{ min_damage = 4.5, max_damage = 4.5, min_damage_effect = 2.5, max_damage_effect = 2.5, concealment = -2 } 		-- Bayonet
 
 			--INSERT--
 --Sniper
@@ -336,9 +338,6 @@ self.wpn_fps_ass_flint.override = {}
 self.wpn_fps_ass_flint.override.wpn_fps_upg_ak_g_rk3 = {}
 self.wpn_fps_ass_flint.override.wpn_fps_upg_ak_g_rk3.unit = "units/pd2_dlc_grv/weapons/wpn_fps_ass_flint_pts/wpn_fps_ass_flint_g_standard"
 self.wpn_fps_ass_flint.override.wpn_fps_upg_ak_g_rk3.third_unit = "units/pd2_dlc_grv/weapons/wpn_third_ass_flint_pts/wpn_third_ass_flint_g_standard"
-table.insert(self.wpn_fps_ass_flint.uses_parts, "wpn_fps_upg_o_m14_scopemount")
-table.insert(self.wpn_fps_ass_flint.uses_parts, "wpn_upg_o_marksmansight_front")
-table.insert(self.wpn_fps_ass_flint.uses_parts, "wpn_upg_o_marksmansight_rear")
 table.insert(self.wpn_fps_ass_flint.uses_parts, "wpn_fps_upg_m4_g_ergo")
 table.insert(self.wpn_fps_ass_flint.uses_parts, "wpn_fps_upg_m4_g_sniper")
 table.insert(self.wpn_fps_ass_flint.uses_parts, "wpn_fps_upg_m4_g_hgrip")
@@ -414,7 +413,7 @@ self.wpn_fps_lmg_par.stock_adapter = "wpn_fps_lmg_m249_s_modern"
 table.insert(self.wpn_fps_lmg_par.uses_parts, "wpn_fps_upg_m4_s_mk46")
 table.insert(self.wpn_fps_lmg_par.uses_parts, "wpn_fps_upg_m4_s_ubr")
 table.insert(self.wpn_fps_lmg_par.uses_parts, "wpn_fps_upg_m4_s_crane")
-table.insert(self.wpn_fps_lmg_par.uses_parts, "wpn_fps_upg_m4_s_standard")   
+table.insert(self.wpn_fps_lmg_par.uses_parts, "wpn_fps_upg_m4_s_standard")
 table.insert(self.wpn_fps_lmg_par.uses_parts, "wpn_fps_upg_m4_s_pts")   
 table.insert(self.wpn_fps_lmg_par.uses_parts, "wpn_fps_snp_tti_s_vltor")
 --UMP
@@ -423,16 +422,16 @@ table.insert(self.wpn_fps_smg_schakal.uses_parts, "wpn_fps_upg_m4_s_mk46")
 table.insert(self.wpn_fps_smg_schakal.uses_parts, "wpn_fps_upg_m4_s_ubr")
 table.insert(self.wpn_fps_smg_schakal.uses_parts, "wpn_fps_upg_m4_s_crane")
 table.insert(self.wpn_fps_smg_schakal.uses_parts, "wpn_fps_upg_m4_s_standard")
-table.insert(self.wpn_fps_smg_schakal.uses_parts, "wpn_fps_upg_m4_s_pts")	
+table.insert(self.wpn_fps_smg_schakal.uses_parts, "wpn_fps_upg_m4_s_pts")
 table.insert(self.wpn_fps_smg_schakal.uses_parts, "wpn_fps_snp_tti_s_vltor")
 --G36
-self.wpn_fps_ass_g36.stock_adapter = "wpn_fps_ass_s552_s_m4" 
-table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_upg_m4_s_mk46")
-table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_upg_m4_s_ubr")
-table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_upg_m4_s_crane")
-table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_upg_m4_s_standard")
-table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_upg_m4_s_pts")	
-table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_snp_tti_s_vltor")
+table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_m4_uupg_m_std")
+table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_upg_m4_m_quad")
+table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_upg_m4_m_straight")
+table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_upg_m4_m_pmag")
+table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_upg_m4_m_l5")
+table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_ass_l85a2_m_emag")
+table.insert(self.wpn_fps_ass_g36.uses_parts, "wpn_fps_m4_upg_m_quick")
 --Akimbo MP5
 self.wpn_fps_smg_x_mp5.stock_adapter = "wpn_fps_upg_m4_s_adapter"
 table.insert(self.wpn_fps_smg_x_mp5.uses_parts, "wpn_fps_upg_m4_s_mk46")
@@ -539,7 +538,7 @@ table.insert(self.wpn_fps_ass_scar.uses_parts, "wpn_fps_upg_m4_s_pts")
 table.insert(self.wpn_fps_smg_mp7.uses_parts, "wpn_fps_smg_schakal_vg_surefire")
 --Ching
 table.insert(self.wpn_fps_ass_ching.uses_parts, "wpn_fps_upg_i_singlefire")
-self.parts.wpn_fps_ass_ching_s_pouch.stats = { total_ammo_mod = 0, concealment = -1, reload = 4 }
+self.parts.wpn_fps_ass_ching_s_pouch.stats = { total_ammo_mod = 0, concealment = -1, reload = 1 }
 self.parts.wpn_fps_ass_ching_b_short.stats = { value = 2, recoil = 2, concealment = 2, suppression = 12, spread = -1, spread_moving = -1 }
 self.parts.wpn_fps_ass_ching_b_short.unit = "units/pd2_dlc_old/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_b_standard"
 self.parts.wpn_fps_ass_ching_b_short.third_unit = "units/pd2_dlc_old/weapons/wpn_fps_ass_ching_pts/wpn_third_ass_ching_b_standard"

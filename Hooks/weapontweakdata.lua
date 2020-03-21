@@ -368,8 +368,8 @@ self.mac10.stats.suppression = 10
 self.mac10.fire_mode_data.fire_rate = 0.06
 self.mac10.can_shoot_through_shield = false
 self.mac10.AMMO_PICKUP = {2, 4}
-self.mac10.timers.reload_not_empty = 1.65
-self.mac10.timers.reload_empty = 2.35
+-- self.mac10.timers.reload_not_empty = 1.65
+-- self.mac10.timers.reload_empty = 2.35
 self.mac10.kick = {standing = { 0.5, 0.7, -0.6, 0.6 } }
 self.mac10.kick.crouching = { 0.4, 0.6, -0.6, 0.6 }
 self.mac10.kick.steelsight = { 0.4, 0.5, -0.5, 0.5 }
@@ -718,8 +718,8 @@ self.galil.fire_mode_data.fire_rate = 0.08
 self.galil.can_shoot_through_shield = false
 self.galil.armor_piercing_chance = 0.8
 self.galil.AMMO_PICKUP = {1, 2}
-self.galil.timers.reload_not_empty = 3
-self.galil.timers.reload_empty = 3.9
+-- self.galil.timers.reload_not_empty = 3
+-- self.galil.timers.reload_empty = 3.9
 self.galil.kick = {standing = { 1.7, 1.7, -0.4, 0.4 } }
 self.galil.kick.crouching = { 1.6, 1.6, -0.4, 0.4 }
 self.galil.kick.steelsight = { 1.6, 1.6, -0.3, 0.3 }
@@ -827,7 +827,7 @@ self.l85a2.fire_mode_data.fire_rate = 0.083333333
 self.l85a2.armor_piercing_chance = 0.7
 self.l85a2.can_shoot_through_shield = false
 self.l85a2.AMMO_PICKUP = {3, 6}
-self.l85a2.timers.reload_empty = 4.2
+-- self.l85a2.timers.reload_empty = 4.2
 self.l85a2.kick = {standing = { 1, 1.2, -0.2, 0.2 } }
 self.l85a2.kick.crouching = { 1, 1.1, -0.1, 0.1 }
 self.l85a2.kick.steelsight = { 0.8, 1, -0.1, 0.1 }
@@ -869,7 +869,7 @@ self.komodo.stats.recoil = 20
 self.komodo.stats.suppression = 10
 self.komodo.armor_piercing_chance = 0.6
 self.komodo.AMMO_PICKUP = {4, 6}
-self.komodo.timers.reload_empty = 3
+-- self.komodo.timers.reload_empty = 3
 self.komodo.kick = {standing = { 1, 1.2, -0.2, 0.2 } }
 self.komodo.kick.crouching = { 1, 1.1, -0.1, 0.1 }
 self.komodo.kick.steelsight = { 0.8, 1, -0.1, 0.1 }
@@ -887,7 +887,7 @@ self.akm.fire_mode_data.fire_rate = 0.1
 self.akm.can_shoot_through_shield = false
 self.akm.armor_piercing_chance = 0.5
 self.akm.AMMO_PICKUP = {1.5, 3}
-self.akm.timers.reload_not_empty = 2.3
+-- self.akm.timers.reload_not_empty = 2.3
 self.akm.kick = {standing = { 1.5, 1.5, -0.5, 0.5 } }
 self.akm.kick.crouching = { 1.5, 1.5, -0.4, 0.4 }
 self.akm.kick.steelsight = { 1.4, 1.4, -0.4, 0.4 }
@@ -903,7 +903,7 @@ self.akm_gold.fire_mode_data.fire_rate = 0.1
 self.akm_gold.can_shoot_through_shield = false
 self.akm_gold.armor_piercing_chance = 0.5
 self.akm_gold.AMMO_PICKUP = {1.5, 3}
-self.akm_gold.timers.reload_not_empty = 2.3
+-- self.akm_gold.timers.reload_not_empty = 2.3
 self.akm_gold.kick = {standing = { 1.5, 1.5, -0.5, 0.5 } }
 self.akm_gold.kick.crouching = { 1.5, 1.5, -0.4, 0.4 }
 self.akm_gold.kick.steelsight = { 1.4, 1.4, -0.4, 0.4 }
@@ -1006,12 +1006,7 @@ self.scar.AMMO_PICKUP = {1, 2}
 self.scar.kick = {standing = { 1.6, 1.6, -0.2, 0.2 } }
 self.scar.kick.crouching = { 1.6, 1.6, -0.1, 0.1 }
 self.scar.kick.steelsight = { 1.5, 1.5, -0.1, 0.1 }
-self.scar.timers = {
-	reload_not_empty = 2,
-	reload_empty = 3,
-	unequip = 0.55,
-	equip = 0.65
-}
+-- self.scar.timers = {reload_not_empty = 2, reload_empty = 3, unequip = 0.55, equip = 0.65}
 
 self.fal.CLIP_AMMO_MAX = 20
 self.fal.AMMO_MAX = 100
@@ -1076,12 +1071,7 @@ self.ching.AMMO_PICKUP = {0.75, 1.25}
 self.ching.kick = {standing = { 2, 2.2, -0.2, 0.2 } }
 self.ching.kick.crouching = { 2, 2.2, -0.1, 0.1 }
 self.ching.kick.steelsight = { 1.9, 2, -0.1, 0.1 }
-self.ching.timers = {
-	reload_not_empty = 2.80,
-	reload_empty = 1.80,
-	unequip = 0.65,
-	equip = 0.65
-}
+-- self.ching.timers = {reload_not_empty = 2.80, reload_empty = 1.80, unequip = 0.65, equip = 0.65}
 
 -- Sniper Rifles --
 
@@ -1238,15 +1228,7 @@ self.boot.can_shoot_through_shield = false
 self.boot.can_shoot_through_wall = true
 self.boot.rays = 12
 self.boot.AMMO_PICKUP = {0.75, 1.25}
-self.boot.timers = {
-	shotgun_reload_enter = 0.66,
-	shotgun_reload_exit_empty = 0.66,
-	shotgun_reload_exit_not_empty = 0.66,
-	shotgun_reload_shell = 0.33,
-	shotgun_reload_first_shell_offset = 0,
-	unequip = 0.45,
-	equip = 0.66
-}
+-- self.boot.timers = {shotgun_reload_enter = 0.66, shotgun_reload_exit_empty = 0.66, shotgun_reload_exit_not_empty = 0.66, shotgun_reload_shell = 0.33, shotgun_reload_first_shell_offset = 0, unequip = 0.45, equip = 0.66}
 self.boot.kick = {standing = { 3.2, 3.6, -0.2, 0.2 } }
 self.boot.kick.crouching = { 3, 3.4, -0.2, 0.2 }
 self.boot.kick.steelsight = { 2.8, 3.2, -0.2, 0.2 }
@@ -1672,12 +1654,6 @@ self.b92fs.stats.suppression = 16
 self.b92fs.fire_mode_data.fire_rate = 0.1
 self.b92fs.can_shoot_through_shield = false
 self.b92fs.AMMO_PICKUP = {2, 5}
-self.b92fs.timers = {
-	reload_not_empty = 1.50,
-	reload_empty = 2.50,
-	unequip = 0.6,
-	equip = 0.45
-}
 self.b92fs.kick = {standing = { 0.5, 0.5, -0.2, 0.2 } }
 self.b92fs.kick.crouching = { 0.4, 0.4, -0.2, 0.2 }
 self.b92fs.kick.steelsight = { 0.3, 0.3, -0.1, 0.1 }
@@ -1713,12 +1689,6 @@ self.packrat.AMMO_PICKUP = {2, 4}
 self.packrat.kick = {standing = { 0.5, 0.5, -0.3, 0.3 } }
 self.packrat.kick.crouching = { 0.4, 0.4, -0.2, 0.2 }
 self.packrat.kick.steelsight = { 0.3, 0.3, -0.1, 0.1 }
-self.packrat.timers = {
-	reload_not_empty = 1.75,
-	reload_empty = 2.80,
-	unequip = 0.50,
-	equip = 0.25
-}
 
 self.x_packrat.CLIP_AMMO_MAX = 30
 self.x_packrat.AMMO_MAX = 180
@@ -2389,8 +2359,8 @@ self.china.stats.spread = 16
 self.china.stats.recoil = 15
 self.china.stats.suppression = 5
 self.china.fire_mode_data.fire_rate = 1.333333
-self.china.timers.shotgun_reload_exit_empty = 1.5
-self.china.timers.shotgun_reload_exit_not_empty = 0.6
+-- self.china.timers.shotgun_reload_exit_empty = 1.5
+-- self.china.timers.shotgun_reload_exit_not_empty = 0.6
 
 self.m32.CLIP_AMMO_MAX = 6
 self.m32.AMMO_MAX = 12
@@ -2429,7 +2399,7 @@ self.slap.AMMO_MAX = 6
 self.slap.stats.damage = 150
 self.slap.stats.spread = 25
 self.slap.stats.suppression = 5
-self.slap.timers.reload_empty = 3.4
+-- self.slap.timers.reload_empty = 3.4
 
 end)
 
