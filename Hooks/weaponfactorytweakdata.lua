@@ -270,7 +270,7 @@ self.parts.wpn_fps_smg_olympic_fg_railed.stats = 				{ value = 3, spread_moving 
 self.parts.wpn_fps_m4_uupg_fg_lr300.stats = 					{ value = 3, spread_moving = 1, recoil = 3, concealment = 2 }
 self.parts.wpn_fps_upg_m4_s_pts.stats = 						{ value = 3, recoil = -1, spread_moving = 1, spread = 1, concealment = 1 }
 self.parts.wpn_fps_snp_tti_s_vltor.stats = 						{ value = 2, recoil = 2, concealment = -1 }
-self.parts.wpn_fps_upg_m4_s_standard.stats = 					{ value = 2, recoil = 1 }
+self.parts.wpn_fps_upg_m4_s_standard.stats = 					{ value = 2, recoil = 2, concealment = -1 }
 self.parts.wpn_fps_ass_asval_s_solid.stats = 					{ value = 2, recoil = 3, spread_moving = -2, concealment = -4, spread = 1 }
 self.parts.wpn_fps_ass_asval_b_proto.stats = 					{ value = 4, damage = -2, recoil = -2, concealment = 2, spread = -2 }
 self.parts.wpn_fps_upg_i_singlefire.stats = 					{ value = 2, damage = 2, spread = 2, spread_moving = 1, recoil = -1, concealment = 0 }		-- Single Fire
