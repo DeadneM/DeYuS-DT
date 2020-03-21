@@ -5,6 +5,31 @@
         <custom_provider version_api_url="https://raw.githubusercontent.com/DeadneM/DeYuS-DT/master/Version.txt" download_url="https://github.com/DeadneM/DeYuS-DT/archive/master.zip"/>
     </AssetUpdates>
 	<Localization directory="Localization" default="english.txt"/>
+<!-- DeYuS-Music start -->
+    <HeistMusic id="Paris2" directory="Music/Paris2">
+        <event name="setup" source="stealth.ogg"/>
+        <event name="anticipation" source="buildup.ogg"/>
+        <event name="assault" source="assault.ogg"/>
+        <event name="control" source="control.ogg"/>
+    </HeistMusic>
+    <HeistMusic id="Vengeance" directory="Music/Vengeance">
+        <event name="setup" source="stealth.ogg"/>
+        <event name="anticipation" source="buildup.ogg"/>
+        <event name="assault" source="assault.ogg"/>
+        <event name="control" source="control.ogg"/>
+    </HeistMusic>
+    <HeistMusic id="TheMoment" directory="Music/TheMoment">
+        <event name="setup" source="stealth.ogg"/>
+        <event name="anticipation" source="buildup.ogg"/>
+        <event name="assault" source="assault.ogg"/>
+        <event name="control" source="control.ogg"/>
+    </HeistMusic>
+    <MenuMusic id="NuclearThrone_Intro" source="Music/Menu/NuclearThrone_Intro.ogg"/>
+    <MenuMusic id="NuclearThrone_Outro" source="Music/Menu/NuclearThrone_Outro.ogg"/>
+    <MenuMusic id="Peacefull" source="Music/Menu/Peacefull.ogg"/>
+    <MenuMusic id="Grandiloquent" source="Music/Menu/Grandiloquent.ogg"/>
+    <MenuMusic id="DeusEX" source="Music/Menu/DeusEX.ogg"/>
+<!-- DeYuS-Music end -->
 <!--No Weapon start part -->
     <GlobalValue id="nothing" color="Color(1, 1, 1)"/>
 	<WeaponMod id="wpn_fps_pis_nothing_body_standard" based_on="wpn_fps_m4_lower_reciever" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" type="lower_reciever" drop="false" is_a_unlockable="false">
