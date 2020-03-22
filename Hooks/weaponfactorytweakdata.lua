@@ -564,7 +564,7 @@ table.insert(self.wpn_fps_pis_x_beer.uses_parts, "wpn_fps_upg_i_autofire")
 table.insert(self.wpn_fps_pis_packrat.uses_parts, "wpn_fps_upg_i_singlefire")
 self.parts.wpn_fps_pis_packrat_o_expert.stats = { value = 1, zoom = 1, damage = 0, spread = 1, recoil = 0, concealment = -1 }
 self.parts.wpn_fps_pis_packrat_ns_wick.stats = { value = 4, damage = 4, spread = 2, spread_moving = 1, recoil = 2, concealment = -3 }
-self.parts.wpn_fps_pis_packrat_m_extended.stats = { value = 2, damage = 0, spread = 0, spread_moving = 0, recoil = 0, concealment = -1, extra_ammo = 0, reload = 4 }
+self.parts.wpn_fps_pis_packrat_m_extended.stats = { value = 2, damage = 0, spread = 0, spread_moving = 0, recoil = 0, concealment = -1, extra_ammo = 0, reload = 1 }
 self.parts.wpn_fps_pis_packrat_m_extended.unit = "units/pd2_dlc_pim/weapons/wpn_fps_pis_packrat_pts/wpn_fps_pis_packrat_m_standard"
 self.parts.wpn_fps_pis_packrat_m_extended.third_unit = "units/pd2_dlc_pim/weapons/wpn_fps_pis_packrat_pts/wpn_third_pis_packrat_m_standard"
 table.insert(self.wpn_fps_x_packrat.uses_parts, "wpn_fps_upg_i_singlefire")

@@ -88,7 +88,7 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 	self.values.temporary.damage_speed_multiplier = {{1.2, 3}} --{{1.3, 5}}
 
 --Inspire
-	self.values.cooldown.long_dis_revive = {{1, 30}} --{{1, 20}}
+	self.values.cooldown.long_dis_revive = {{3, 120}} --{{1, 20}}
 
 --Crew Upgrades
 	self.values.team.crew_add_health = {6}
@@ -109,8 +109,8 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 
 --Misc
 	self.values.player.damage_shake_multiplier = {1} --{0.5}
-	self.values.player.drill_speed_multiplier = {0.75, 0.45} --{0.85, 0.7}
-	self.killshot_close_panic_range = 800 --900
+	self.values.player.drill_speed_multiplier = {0.75, 0.60} --{0.85, 0.7}
+	self.killshot_close_panic_range = 600 --900
 	self.berserker_movement_speed_multiplier = 0.25 --0.4
 	self.weapon_movement_penalty = {lmg = 0.8, minigun = 0.6} --{lmg = 1, minigun = 1}
 	self.explosive_bullet = {curve_pow = 0.5, player_dmg_mul = 0.1, range = 250} --{curve_pow = 0.5, player_dmg_mul = 0.1, range = 200}

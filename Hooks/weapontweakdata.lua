@@ -2501,7 +2501,7 @@ self.m134.stats.suppression = 2
 self.m134.fire_mode_data.fire_rate = 0.02
 self.m134.can_shoot_through_shield = true
 self.m134.armor_piercing_chance = 1
-self.m134.AMMO_PICKUP = {0,0}
+self.m134.AMMO_PICKUP = {0.4,0.8}
 
 self.shuno.CLIP_AMMO_MAX = 750
 self.shuno.AMMO_MAX = 1500
@@ -2512,7 +2512,7 @@ self.shuno.stats.recoil = 18
 self.shuno.stats.suppression = 2
 self.shuno.can_shoot_through_shield = false
 self.shuno.armor_piercing_chance = 0.8
-self.shuno.AMMO_PICKUP = {0,0}
+self.shuno.AMMO_PICKUP = {0.4,0.8}
 
 self.flamethrower_mk2.CLIP_AMMO_MAX = 600
 self.flamethrower_mk2.AMMO_MAX = 1800
@@ -2526,7 +2526,7 @@ self.flamethrower_mk2.AMMO_PICKUP = {0.4,0.8}
 self.system.CLIP_AMMO_MAX = 400
 self.system.AMMO_MAX = 1200
 self.system.stats.damage = 30
-self.system.AMMO_PICKUP = {0,0}
+self.system.AMMO_PICKUP = {0.4,0.8}
 
 -- Grenade Launchers
 
