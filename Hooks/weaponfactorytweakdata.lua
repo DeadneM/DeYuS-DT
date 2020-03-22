@@ -309,20 +309,28 @@ table.insert(self.wpn_fps_lmg_hk21.uses_parts, "wpn_fps_ass_g3_g_retro")
 --SAW
 table.insert(self.wpn_fps_saw.uses_parts, "wpn_fps_upg_fl_ass_smg_sho_peqbox")
 table.insert(self.wpn_fps_saw.uses_parts, "wpn_fps_upg_fl_ass_smg_sho_surefire")
-table.insert(self.wpn_fps_saw.uses_parts, "wpn_fps_upg_fl_ass_peq15")	
+table.insert(self.wpn_fps_saw.uses_parts, "wpn_fps_upg_fl_ass_peq15")
 table.insert(self.wpn_fps_saw.uses_parts, "wpn_fps_upg_fl_ass_laser")
-table.insert(self.wpn_fps_saw.uses_parts, "wpn_fps_upg_fl_ass_utg")           
+table.insert(self.wpn_fps_saw.uses_parts, "wpn_fps_upg_fl_ass_utg")
 table.insert(self.wpn_fps_saw_secondary.uses_parts, "wpn_fps_upg_fl_ass_smg_sho_peqbox")
 table.insert(self.wpn_fps_saw_secondary.uses_parts, "wpn_fps_upg_fl_ass_smg_sho_surefire")
 table.insert(self.wpn_fps_saw_secondary.uses_parts, "wpn_fps_upg_fl_ass_peq15")
 table.insert(self.wpn_fps_saw_secondary.uses_parts, "wpn_fps_upg_fl_ass_laser")
-table.insert(self.wpn_fps_saw_secondary.uses_parts, "wpn_fps_upg_fl_ass_utg")   
+table.insert(self.wpn_fps_saw_secondary.uses_parts, "wpn_fps_upg_fl_ass_utg")
 --FlameThrower
 table.insert(self.wpn_fps_fla_mk2.uses_parts, "wpn_fps_upg_fl_ass_smg_sho_peqbox")
 table.insert(self.wpn_fps_fla_mk2.uses_parts, "wpn_fps_upg_fl_ass_smg_sho_surefire")
-table.insert(self.wpn_fps_fla_mk2.uses_parts, "wpn_fps_upg_fl_ass_peq15")	
+table.insert(self.wpn_fps_fla_mk2.uses_parts, "wpn_fps_upg_fl_ass_peq15")
 table.insert(self.wpn_fps_fla_mk2.uses_parts, "wpn_fps_upg_fl_ass_laser")
-table.insert(self.wpn_fps_fla_mk2.uses_parts, "wpn_fps_upg_fl_ass_utg")           
+table.insert(self.wpn_fps_fla_mk2.uses_parts, "wpn_fps_upg_fl_ass_utg")
+--Judge
+table.insert(self.wpn_fps_pis_judge.uses_parts, "wpn_fps_pis_rage_g_ergo")
+table.insert(self.wpn_fps_pis_x_judge.uses_parts, "wpn_fps_pis_rage_g_ergo")
+-- Crosskill Guard
+table.insert(self.wpn_fps_pis_shrew.uses_parts, "wpn_fps_pis_1911_co_1")
+table.insert(self.wpn_fps_pis_shrew.uses_parts, "wpn_fps_pis_1911_co_2")
+table.insert(self.wpn_fps_pis_x_shrew.uses_parts, "wpn_fps_pis_1911_co_1")
+table.insert(self.wpn_fps_pis_x_shrew.uses_parts, "wpn_fps_pis_1911_co_2")
 --AK74
 table.insert(self.wpn_fps_ass_74.uses_parts, "wpn_fps_lmg_rpk_s_standard")
 table.insert(self.wpn_fps_ass_74.uses_parts, "wpn_fps_lmg_rpk_fg_standard")
@@ -828,6 +836,93 @@ table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_upg_ass_m4_lower_reciev
 table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_ass_l85a2_m_emag")
 
 --No sight part
+	local no_sight = {
+		"wpn_fps_ass_74",
+		"wpn_fps_ass_ak5",
+		"wpn_fps_ass_akm",
+		"wpn_fps_ass_akm_gold",
+		"wpn_fps_ass_amcar",
+		"wpn_fps_ass_asval",
+		"wpn_fps_ass_aug",
+		"wpn_fps_ass_ching",
+		"wpn_fps_ass_contraband",
+		"wpn_fps_ass_corgi",
+		"wpn_fps_ass_fal",
+		"wpn_fps_ass_famas",
+		"wpn_fps_ass_flint",
+		"wpn_fps_ass_g3",
+		"wpn_fps_ass_g36",
+		"wpn_fps_ass_galil",
+		"wpn_fps_ass_l85a2",
+		"wpn_fps_ass_m14",
+		"wpn_fps_ass_m16",
+		"wpn_fps_ass_m4",
+		"wpn_fps_ass_s552",
+		"wpn_fps_ass_scar",
+		"wpn_fps_ass_sub2000",
+		"wpn_fps_ass_tecci",
+		"wpn_fps_ass_vhs",
+		"wpn_fps_bow_ecp",
+		"wpn_fps_gre_arbiter",
+		"wpn_fps_gre_m32",
+		"wpn_fps_gre_slap",
+		"wpn_fps_pis_deagle",
+		"wpn_fps_pis_judge",
+		"wpn_fps_pis_rage",
+		"wpn_fps_rpg7",
+		"wpn_fps_sho_aa12",
+		"wpn_fps_sho_ben",
+		"wpn_fps_sho_ksg",
+		"wpn_fps_sho_rota",
+		"wpn_fps_sho_spas12",
+		"wpn_fps_sho_striker",
+		"wpn_fps_shot_r870",
+		"wpn_fps_shot_saiga",
+		"wpn_fps_shot_serbu",
+		"wpn_fps_smg_akmsu",
+		"wpn_fps_smg_coal",
+		"wpn_fps_smg_cobray",
+		"wpn_fps_smg_hajk",
+		"wpn_fps_smg_m45",
+		"wpn_fps_smg_mac10",
+		"wpn_fps_smg_mp5",
+		"wpn_fps_smg_mp7",
+		"wpn_fps_smg_mp9",
+		"wpn_fps_smg_olympic",
+		"wpn_fps_smg_p90",
+		"wpn_fps_smg_polymer",
+		"wpn_fps_smg_schakal",
+		"wpn_fps_smg_scorpion",
+		"wpn_fps_smg_sr2",
+		"wpn_fps_smg_sterling",
+		"wpn_fps_smg_tec9",
+		"wpn_fps_smg_thompson",
+		"wpn_fps_smg_uzi",
+		"wpn_fps_snp_desertfox",
+		"wpn_fps_snp_m95",
+		"wpn_fps_snp_model70",
+		"wpn_fps_snp_mosin",
+		"wpn_fps_snp_msr",
+		"wpn_fps_snp_r93",
+		"wpn_fps_snp_siltstone",
+		"wpn_fps_snp_tti",
+		"wpn_fps_snp_wa2000",
+		"wpn_fps_shot_huntsman",
+		"wpn_fps_gre_m79",
+		"wpn_fps_shot_b682",
+		"wpn_fps_smg_baka",
+		"wpn_fps_shot_m37",
+		"wpn_fps_smg_x_sr2",
+		"wpn_fps_smg_x_mp5",
+		"wpn_fps_smg_x_akmsu",
+		"wpn_fps_sho_boot",
+		"wpn_fps_gre_ray",
+		"wpn_fps_smg_erma"
+	}
+for i, weapon_id in ipairs(no_sight) do
+table.insert(self[weapon_id].uses_parts, "wpn_fps_upg_o_no")
+table.insert(self[weapon_id].uses_parts, "wpn_fps_upg_o_no2")
+end
 local sightid = {"wpn_fps_upg_o_no", "wpn_fps_upg_o_no"}
 for _, sight_id in ipairs(sightid) do
 	self.wpn_fps_ass_amcar.adds[sight_id] = {
@@ -1006,6 +1101,53 @@ for _, sight_id in ipairs(sightid) do
 	}
 end
 
+--No stock part
+local no_stock = {
+		"wpn_fps_ass_74",
+		"wpn_fps_ass_ak5",
+		"wpn_fps_ass_akm",
+		"wpn_fps_ass_akm_gold",
+		"wpn_fps_ass_asval",
+		"wpn_fps_ass_fal",
+		"wpn_fps_ass_flint",
+		"wpn_fps_ass_g36",
+		"wpn_fps_ass_galil",
+		"wpn_fps_ass_s552",
+		"wpn_fps_ass_scar",
+		"wpn_fps_lmg_rpk",
+		"wpn_fps_shot_saiga",
+		"wpn_fps_smg_akmsu",
+		"wpn_fps_smg_coal",
+		"wpn_fps_smg_cobray",
+		"wpn_fps_smg_hajk",
+		"wpn_fps_smg_mac10",
+		"wpn_fps_smg_mp7",
+		"wpn_fps_smg_mp9",
+		"wpn_fps_smg_polymer",
+		"wpn_fps_smg_schakal",
+		"wpn_fps_smg_sr2",
+		"wpn_fps_smg_uzi",
+		"wpn_fps_smg_x_coal",
+		"wpn_fps_smg_x_cobray",
+		"wpn_fps_smg_x_erma",
+		"wpn_fps_smg_x_hajk",
+		"wpn_fps_smg_x_m45",
+		"wpn_fps_smg_x_mac10",
+		"wpn_fps_smg_x_mp7",
+		"wpn_fps_smg_x_mp9",
+		"wpn_fps_smg_x_polymer",
+		"wpn_fps_smg_x_schakal",
+		"wpn_fps_smg_x_sr2",
+		"wpn_fps_smg_x_uzi",
+		"wpn_fps_lmg_m249",
+		"wpn_fps_lmg_par"
+}
+for i, weapon_id in ipairs(no_stock) do
+	table.insert(self[weapon_id].uses_parts, "wpn_fps_upg_s_no")
+end
+self.wpn_fps_ass_g36.adds = {}
+self.wpn_fps_ass_g36.adds.wpn_fps_upg_s_no = {"wpn_fps_ass_g36_body_standard", "wpn_fps_ass_g36_g_standard"}
+
 end)
 
 --Bonus restriction removal
@@ -1036,21 +1178,12 @@ self.parts.wpn_fps_upg_bonus_team_exp_money_p3.custom_stats = { exp_multiplier =
 		wpn_fps_upg_bonus_damage_p2 = {},
 		wpn_fps_upg_bonus_total_ammo_p3 = {}
 	}
-local all_pass, weapon_pass, exclude_weapon_pass, category_pass, exclude_category_pass = nil
 	for id, data in pairs(tweak_data.upgrades.definitions) do
 		local weapon_tweak = tweak_data.weapon[data.weapon_id]
-		local primary_category = weapon_tweak and weapon_tweak.categories and weapon_tweak.categories[1]
 		if data.weapon_id and weapon_tweak and data.factory_id and self[data.factory_id] then
 			for part_id, params in pairs(uses_parts) do
-				weapon_pass = not params.weapon or table.contains(params.weapon, data.weapon_id)
-				exclude_weapon_pass = not params.exclude_weapon or not table.contains(params.exclude_weapon, data.weapon_id)
-				category_pass = not params.category or table.contains(params.category, primary_category)
-				exclude_category_pass = not params.exclude_category or not table.contains(params.exclude_category, primary_category)
-				all_pass = weapon_pass and exclude_weapon_pass and category_pass and exclude_category_pass
-				if all_pass then
-					table.insert(self[data.factory_id].uses_parts, part_id)
-					table.insert(self[data.factory_id .. "_npc"].uses_parts, part_id)
-				end
+				table.insert(self[data.factory_id].uses_parts, part_id)
+				table.insert(self[data.factory_id .. "_npc"].uses_parts, part_id)
 			end
 		end
 	end

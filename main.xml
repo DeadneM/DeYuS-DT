@@ -114,178 +114,17 @@
 <!--No Weapon end part -->
 <!--No sight start part -->
 	<WeaponMod id="wpn_fps_upg_o_no" based_on="wpn_fps_upg_o_eotech" type="sight" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" texture_bundle_folder="mods" drop="false" is_a_unlockable="true">
-		<stats concealment = "1" recoil ="0"/> 
-		<weapons>
-			<value_node value="wpn_fps_ass_74"/>
-			<value_node value="wpn_fps_ass_ak5"/>
-			<value_node value="wpn_fps_ass_akm"/>
-			<value_node value="wpn_fps_ass_akm_gold"/>
-			<value_node value="wpn_fps_ass_amcar"/>
-			<value_node value="wpn_fps_ass_asval"/>
-			<value_node value="wpn_fps_ass_aug"/>
-			<value_node value="wpn_fps_ass_ching"/>
-			<value_node value="wpn_fps_ass_contraband"/>
-			<value_node value="wpn_fps_ass_corgi"/>
-			<value_node value="wpn_fps_ass_fal"/>
-			<value_node value="wpn_fps_ass_famas"/>
-			<value_node value="wpn_fps_ass_flint"/>
-			<value_node value="wpn_fps_ass_g3"/>
-			<value_node value="wpn_fps_ass_g36"/>
-			<value_node value="wpn_fps_ass_galil"/>
-			<value_node value="wpn_fps_ass_l85a2"/>
-			<value_node value="wpn_fps_ass_m14"/>
-			<value_node value="wpn_fps_ass_m16"/>
-			<value_node value="wpn_fps_ass_m4"/>
-			<value_node value="wpn_fps_ass_s552"/>
-			<value_node value="wpn_fps_ass_scar"/>
-			<value_node value="wpn_fps_ass_sub2000"/>
-			<value_node value="wpn_fps_ass_tecci"/>
-			<value_node value="wpn_fps_ass_vhs"/>
-			<value_node value="wpn_fps_bow_ecp"/>
-			<value_node value="wpn_fps_gre_arbiter"/>
-			<value_node value="wpn_fps_gre_m32"/>
-			<value_node value="wpn_fps_gre_slap"/>
-			<value_node value="wpn_fps_pis_deagle"/>
-			<value_node value="wpn_fps_pis_judge"/>
-			<value_node value="wpn_fps_pis_rage"/>
-			<value_node value="wpn_fps_rpg7"/>
-			<value_node value="wpn_fps_sho_aa12"/>
-			<value_node value="wpn_fps_sho_ben"/>
-			<value_node value="wpn_fps_sho_ksg"/>
-			<value_node value="wpn_fps_sho_rota"/>
-			<value_node value="wpn_fps_sho_spas12"/>
-			<value_node value="wpn_fps_sho_striker"/>
-			<value_node value="wpn_fps_shot_r870"/>
-			<value_node value="wpn_fps_shot_saiga"/>
-			<value_node value="wpn_fps_shot_serbu"/>
-			<value_node value="wpn_fps_smg_akmsu"/>
-			<value_node value="wpn_fps_smg_coal"/>
-			<value_node value="wpn_fps_smg_cobray"/>
-			<value_node value="wpn_fps_smg_hajk"/>
-			<value_node value="wpn_fps_smg_m45"/>
-			<value_node value="wpn_fps_smg_mac10"/>
-			<value_node value="wpn_fps_smg_mp5"/>
-			<value_node value="wpn_fps_smg_mp7"/>
-			<value_node value="wpn_fps_smg_mp9"/>
-			<value_node value="wpn_fps_smg_olympic"/>
-			<value_node value="wpn_fps_smg_p90"/>
-			<value_node value="wpn_fps_smg_polymer"/>
-			<value_node value="wpn_fps_smg_schakal"/>
-			<value_node value="wpn_fps_smg_scorpion"/>
-			<value_node value="wpn_fps_smg_sr2"/>
-			<value_node value="wpn_fps_smg_sterling"/>
-			<value_node value="wpn_fps_smg_tec9"/>
-			<value_node value="wpn_fps_smg_thompson"/>
-			<value_node value="wpn_fps_smg_uzi"/>
-			<value_node value="wpn_fps_snp_desertfox"/>
-			<value_node value="wpn_fps_snp_m95"/>
-			<value_node value="wpn_fps_snp_model70"/>
-			<value_node value="wpn_fps_snp_mosin"/>
-			<value_node value="wpn_fps_snp_msr"/>
-			<value_node value="wpn_fps_snp_r93"/>
-			<value_node value="wpn_fps_snp_siltstone"/>
-			<value_node value="wpn_fps_snp_tti"/>
-			<value_node value="wpn_fps_snp_wa2000"/>
-			<value_node value="wpn_fps_shot_huntsman"/>
-			<value_node value="wpn_fps_gre_m79"/>
-			<value_node value="wpn_fps_shot_b682"/>
-			<value_node value="wpn_fps_smg_baka"/>
-			<value_node value="wpn_fps_shot_m37"/>
-			<value_node value="wpn_fps_smg_x_sr2"/>
-			<value_node value="wpn_fps_smg_x_mp5"/>
-			<value_node value="wpn_fps_smg_x_akmsu"/>
-			<value_node value="wpn_fps_sho_boot"/>
-			<value_node value="wpn_fps_gre_ray"/>
-			<value_node value="wpn_fps_smg_erma"/>
-		</weapons>
+		<stats concealment = "1" recoil ="0"/>
 	</WeaponMod>
 	<WeaponMod id="wpn_fps_upg_o_no2" based_on="wpn_fps_upg_o_eotech" type="sight" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" texture_bundle_folder="mods" drop="false" is_a_unlockable="true">
-		<stats concealment = "1" recoil ="0"/> 
-		<weapons>
-			<value_node value="wpn_fps_ass_74"/>
-			<value_node value="wpn_fps_ass_ak5"/>
-			<value_node value="wpn_fps_ass_akm"/>
-			<value_node value="wpn_fps_ass_akm_gold"/>
-			<value_node value="wpn_fps_ass_amcar"/>
-			<value_node value="wpn_fps_ass_asval"/>
-			<value_node value="wpn_fps_ass_aug"/>
-			<value_node value="wpn_fps_ass_ching"/>
-			<value_node value="wpn_fps_ass_contraband"/>
-			<value_node value="wpn_fps_ass_corgi"/>
-			<value_node value="wpn_fps_ass_fal"/>
-			<value_node value="wpn_fps_ass_famas"/>
-			<value_node value="wpn_fps_ass_flint"/>
-			<value_node value="wpn_fps_ass_g3"/>
-			<value_node value="wpn_fps_ass_g36"/>
-			<value_node value="wpn_fps_ass_galil"/>
-			<value_node value="wpn_fps_ass_l85a2"/>
-			<value_node value="wpn_fps_ass_m14"/>
-			<value_node value="wpn_fps_ass_m16"/>
-			<value_node value="wpn_fps_ass_m4"/>
-			<value_node value="wpn_fps_ass_s552"/>
-			<value_node value="wpn_fps_ass_scar"/>
-			<value_node value="wpn_fps_ass_sub2000"/>
-			<value_node value="wpn_fps_ass_tecci"/>
-			<value_node value="wpn_fps_ass_vhs"/>
-			<value_node value="wpn_fps_bow_ecp"/>
-			<value_node value="wpn_fps_gre_arbiter"/>
-			<value_node value="wpn_fps_gre_m32"/>
-			<value_node value="wpn_fps_gre_slap"/>
-			<value_node value="wpn_fps_pis_deagle"/>
-			<value_node value="wpn_fps_pis_judge"/>
-			<value_node value="wpn_fps_pis_rage"/>
-			<value_node value="wpn_fps_rpg7"/>
-			<value_node value="wpn_fps_sho_aa12"/>
-			<value_node value="wpn_fps_sho_ben"/>
-			<value_node value="wpn_fps_sho_ksg"/>
-			<value_node value="wpn_fps_sho_rota"/>
-			<value_node value="wpn_fps_sho_spas12"/>
-			<value_node value="wpn_fps_sho_striker"/>
-			<value_node value="wpn_fps_shot_r870"/>
-			<value_node value="wpn_fps_shot_saiga"/>
-			<value_node value="wpn_fps_shot_serbu"/>
-			<value_node value="wpn_fps_smg_akmsu"/>
-			<value_node value="wpn_fps_smg_coal"/>
-			<value_node value="wpn_fps_smg_cobray"/>
-			<value_node value="wpn_fps_smg_hajk"/>
-			<value_node value="wpn_fps_smg_m45"/>
-			<value_node value="wpn_fps_smg_mac10"/>
-			<value_node value="wpn_fps_smg_mp5"/>
-			<value_node value="wpn_fps_smg_mp7"/>
-			<value_node value="wpn_fps_smg_mp9"/>
-			<value_node value="wpn_fps_smg_olympic"/>
-			<value_node value="wpn_fps_smg_p90"/>
-			<value_node value="wpn_fps_smg_polymer"/>
-			<value_node value="wpn_fps_smg_schakal"/>
-			<value_node value="wpn_fps_smg_scorpion"/>
-			<value_node value="wpn_fps_smg_sr2"/>
-			<value_node value="wpn_fps_smg_sterling"/>
-			<value_node value="wpn_fps_smg_tec9"/>
-			<value_node value="wpn_fps_smg_thompson"/>
-			<value_node value="wpn_fps_smg_uzi"/>
-			<value_node value="wpn_fps_snp_desertfox"/>
-			<value_node value="wpn_fps_snp_m95"/>
-			<value_node value="wpn_fps_snp_model70"/>
-			<value_node value="wpn_fps_snp_mosin"/>
-			<value_node value="wpn_fps_snp_msr"/>
-			<value_node value="wpn_fps_snp_r93"/>
-			<value_node value="wpn_fps_snp_siltstone"/>
-			<value_node value="wpn_fps_snp_tti"/>
-			<value_node value="wpn_fps_snp_wa2000"/>
-			<value_node value="wpn_fps_shot_huntsman"/>
-			<value_node value="wpn_fps_gre_m79"/>
-			<value_node value="wpn_fps_shot_b682"/>
-			<value_node value="wpn_fps_smg_baka"/>
-			<value_node value="wpn_fps_shot_m37"/>
-			<value_node value="wpn_fps_smg_x_sr2"/>
-			<value_node value="wpn_fps_smg_x_mp5"/>
-			<value_node value="wpn_fps_smg_x_akmsu"/>
-			<value_node value="wpn_fps_sho_boot"/>
-			<value_node value="wpn_fps_gre_ray"/>
-			<value_node value="wpn_fps_smg_erma"/>
-		</weapons>
+		<stats concealment = "1" recoil ="0"/>
 	</WeaponMod>
 <!--No sight end part -->
+<!--No stock start part -->
+	<WeaponMod id="wpn_fps_upg_s_no" based_on="wpn_fps_lmg_rpk_s_standard" type="stock" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" drop="false" texture_bundle_folder="mods" is_a_unlockable="true">
+		<stats spread="-2" recoil="-3" concealment="3" />
+	</WeaponMod>
+<!--No stock end part -->
 	<AddFiles directory="assets">
 		<texture path="guis/nothing"/>
 <!--No Weapon start part -->
@@ -298,5 +137,8 @@
 		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_upg_o_no"/>
 		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_upg_o_no2"/>
 <!--No sight end part -->
+<!--No stock start part -->
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_upg_s_no"/>
+<!--No stock end part -->
 	</AddFiles>
 </mod>
