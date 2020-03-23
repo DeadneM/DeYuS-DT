@@ -46,37 +46,24 @@ Hooks:Add("MenuManagerPostInitialize", "HCPB_HideClearProgressButton", HideClear
 
 --Enable chat, based on Seven/Unknown Knight's Simulate Online mod
 local DontBlockChat = true
-function MenuManager:toggle_chatinput()
-	if (not DontBlockChat and Global.game_settings.single_player) or Application:editor() then
-		return
+--Toggle chat when offline
+Hooks:PreHook(MenuManager, "toggle_chatinput", "toggle_chatinput_whenoff", function(self)
+	if Global.game_settings.single_player and DontBlockChat then
+		if managers.hud then
+			managers.hud:toggle_chatinput()
+			return true
+		end
 	end
-	if SystemInfo:platform() ~= Idstring("WIN32") then
-		return
-	end
-	if self:active_menu() then
-		return
-	end
-	if not managers.network:session() then
-		return
-	end
-	if managers.hud then
-		managers.hud:toggle_chatinput()
-
-		return true
-	end
-end
+end)
 
 --Only show difficulty settings and nothing else in offline filters
-local orig_MenuCrimeNetFiltersInitiator_update_node = MenuCrimeNetFiltersInitiator.update_node
-function MenuCrimeNetFiltersInitiator:update_node(node)
-	--Set all visible first
-	for _, item in ipairs(node:items() or {}) do
-		item:set_visible(true)
-	end
-	--Original
-	orig_MenuCrimeNetFiltersInitiator_update_node(self, node)
+Hooks:PostHook(MenuCrimeNetFiltersInitiator, "update_node", "update_node_whenoff", function(self, node)
 	--If single player, only show difficulty filter
 	if Global.game_settings.single_player then
+		--Set all visible first
+		for _, item in ipairs(node:items() or {}) do
+			item:set_visible(true)
+		end
 		for _, item in ipairs(node:items() or {}) do
 			local allow = {
 				"divider_lobby_filters",
@@ -92,25 +79,20 @@ function MenuCrimeNetFiltersInitiator:update_node(node)
 			end
 		end
 	end
-end
+end)
 
---Multiplayer check used to set filter item visibility, return true so that the filters are visible.
---This check is also used in some other places as well as in MenuComponentManager which need to be fixed.
---If someone finds a better solution for making filters visible, feel free to let me know.
-function MenuCallbackHandler:is_multiplayer()
+--Multiplayer check used to set filter item visibility, return true so that the filters are visible
+Hooks:PreHook(MenuCallbackHandler, "is_multiplayer", "is_multiplayer_whenoff", function(self)
 	--Only override in menus
 	if not game_state_machine or game_state_machine:current_state_name() == "menu_main" then
 		return true
 	end
-	return not Global.game_settings.single_player
-end
+end)
 
 --Load filters settings when a single player game is started
 local ShowOffCrimenetFilters = true
-local orig_MenuCallbackHandler_play_single_player = MenuCallbackHandler.play_single_player
-function MenuCallbackHandler:play_single_player()
+Hooks:PostHook(MenuCallbackHandler, "play_single_player", "play_single_player_whenoff", function(self)
 	if ShowOffCrimenetFilters and managers.network.matchmake and managers.network.matchmake.load_user_filters then
 		managers.network.matchmake:load_user_filters()
 	end
-	orig_MenuCallbackHandler_play_single_player(self)
-end
+end)
