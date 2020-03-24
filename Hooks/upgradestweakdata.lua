@@ -3,7 +3,7 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 
 --Value of stock armor
 	self.values.player.body_armor = {
-		armor = { 0, 2, 3, 5, 6, 11, 14 }, --{ 0, 3, 4, 5, 7, 9, 15 }
+		armor = { 0, 2, 3, 5, 6, 10, 16 }, --{ 0, 3, 4, 5, 7, 9, 15 }
 		movement = { 1.025, 1, 0.95, 0.9, 0.85, 0.8, 0.7 }, --{ 1.05, 1.025, 1, 0.95, 0.75, 0.65, 0.575 }
 		concealment = { 30, 27, 22, 20, 18, 12, 1 }, --{ 30, 26, 23, 21, 18, 12, 1 }
 		dodge = { 0.05, -0.05, -0.1, -0.15, -0.2, -0.25, -0.55 },
@@ -14,7 +14,7 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 --Value of ExPresident stored health and armor
 	self.values.player.body_armor.skill_max_health_store = { 12, 11, 10, 9, 8, 7, 4 } --{ 14, 13.5, 12.5, 12, 10.5, 9.5, 4 }
 	self.values.player.body_armor.skill_kill_change_regenerate_speed = { 14, 13, 12, 11, 10, 8, 4 } --{ 14, 13.5, 12.5, 12, 10.5, 9.5, 4 }
-	self.values.player.kill_change_regenerate_speed = {1.5} --{1.4}
+	self.values.player.kill_change_regenerate_speed = {1.3} --{1.4}
 
 --Critical when untouched
 	self.values.player.unseen_increased_crit_chance = {
@@ -58,8 +58,8 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 	}
 
 --Dodge and Crouch
-	self.values.player.run_dodge_chance = {0.20} --{0.1}
-	self.values.player.crouch_dodge_chance = {0.15, 0.15} --{0.05, 0.15}
+	self.values.player.run_dodge_chance = {0.15} --{0.1}
+	self.values.player.crouch_dodge_chance = {0.05, 0.15} --{0.05, 0.15}
 	self.values.player.camouflage_bonus = {0.75, 0.55} --{0.85, 0.65}
 	self.values.player.stand_still_crouch_camouflage_bonus = {0.85, 0.8, 0.75} --{0.9, 0.85, 0.8}
 
@@ -71,24 +71,24 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 
 --Dampered Damage
 	self.values.temporary.dmg_multiplier_outnumbered = {{1.25, 5}} --{{1.15, 7}}
-	self.values.temporary.dmg_dampener_outnumbered = {{0.85, 5}} --{{0.9, 7}}
+	self.values.temporary.dmg_dampener_outnumbered = {{0.75, 5}} --{{0.9, 7}}
 	self.values.temporary.dmg_dampener_outnumbered_strong = {{0.75, 5}}
 	self.values.temporary.dmg_dampener_close_contact = {
-		{0.9, 5},
-		{0.8, 5},
-		{0.7, 5}
+		{0.85, 5},
+		{0.80, 5},
+		{0.75, 5}
 	}
 
 --Faster reload
-	self.values.temporary.single_shot_fast_reload = {{1.5, 5}} --{{2, 4}}
-	self.values.temporary.reload_weapon_faster = {{1.5, 5}} --{{2, 10}}
-	self.values.player.melee_kill_increase_reload_speed = {{1.5, 5}} --{{1.5, 10}}
+	self.values.temporary.single_shot_fast_reload = {{1.3, 5}} --{{2, 4}}
+	self.values.temporary.reload_weapon_faster = {{1.3, 5}} --{{2, 10}}
+	self.values.player.melee_kill_increase_reload_speed = {{1.3, 5}} --{{1.5, 10}}
 
 --Faster movement
-	self.values.temporary.damage_speed_multiplier = {{1.2, 3}} --{{1.3, 5}}
+	self.values.temporary.damage_speed_multiplier = {{1.25, 5}} --{{1.3, 5}}
 
 --Inspire
-	self.values.cooldown.long_dis_revive = {{3, 120}} --{{1, 20}}
+	self.values.cooldown.long_dis_revive = {{1, 30}} --{{1, 20}}
 
 --Crew Upgrades
 	self.values.team.crew_add_health = {6}
@@ -108,7 +108,7 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 	self.values.team.crew_ai_ap_ammo = {true}
 
 --Misc
-	self.values.player.damage_shake_multiplier = {1} --{0.5}
+	self.values.player.damage_shake_multiplier = {0.8} --{0.5}
 	self.values.player.drill_speed_multiplier = {0.75, 0.60} --{0.85, 0.7}
 	self.killshot_close_panic_range = 600 --900
 	self.berserker_movement_speed_multiplier = 0.25 --0.4
