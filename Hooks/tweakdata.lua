@@ -1,3 +1,7 @@
+--OverLevel100 Part
+--Fake the level to stay at 100 but show the above one
+for i = 101, 10000 do tweak_data.experience_manager.levels[i] = tweak_data.experience_manager.levels[100] end
+
 --Hefty part
 local _hefty={
 	bank_manager_key=5,
