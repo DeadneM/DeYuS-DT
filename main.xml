@@ -29,6 +29,8 @@
     <MenuMusic id="Peacefull" source="Music/Menu/Peacefull.ogg"/>
     <MenuMusic id="Grandiloquent" source="Music/Menu/Grandiloquent.ogg"/>
     <MenuMusic id="DeusEX" source="Music/Menu/DeusEX.ogg"/>
+    <MenuMusic id="NeroSyndicate" source="Music/Menu/NeroSyndicate.ogg"/>
+    <MenuMusic id="SkrillexSyndicate" source="Music/Menu/SkrillexSyndicate.ogg"/>
 <!-- DeYuS-Music end -->
 <!--No Weapon start part -->
     <GlobalValue id="nothing" color="Color(1, 1, 1)"/>

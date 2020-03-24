@@ -15,6 +15,10 @@
     "menu_jukebox_screen_Grandiloquent" : "Grandiloquent",
     "menu_jukebox_DeusEX" : "DeusEX",
     "menu_jukebox_screen_DeusEX" : "DeusEX",
+    "menu_jukebox_NeroSyndicate" : "Nero Syndicate",
+    "menu_jukebox_screen_NeroSyndicate" : "Nero Syndicate",
+    "menu_jukebox_SkrillexSyndicate" : "Skrillex Syndicate",
+    "menu_jukebox_screen_SkrillexSyndicate" : "Skrillex Syndicate",
 	
     "bm_w_nothing" : "No Weapon",
     "bm_w_nothing2" : "No Weapon",
