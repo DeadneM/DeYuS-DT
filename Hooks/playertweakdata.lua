@@ -74,8 +74,8 @@ Hooks:PostHook(PlayerTweakData, "init", "COD_init", function(self)
 	--self.damage.ARMOR_STEPS = 1
 	--self.damage.ARMOR_DAMAGE_REDUCTION = 0
 	--self.damage.BLEED_OT_TIME = 40
-	self.damage.TASED_TIME = 20 --10
-	self.damage.TASED_RECOVER_TIME = 0.5 --1
+	self.damage.TASED_TIME = 15 --10
+	--self.damage.TASED_RECOVER_TIME = 0.5 --1
 	self.damage.BLEED_OUT_HEALTH_INIT = self.damage.HEALTH_INIT / 2 --10
 	--self.damage.DOWNED_TIME = 30
 	--self.damage.DOWNED_TIME_DEC = 5
@@ -126,7 +126,7 @@ Hooks:PostHook(PlayerTweakData, "init", "COD_init", function(self)
 		MAX_SENSITIVITY = 2 --1.7
 	}
 	self.omniscience = {
-		start_t = 2, --3.5
+		start_t = 3, --3.5
 		interval_t = 0.5, --1
 		sense_radius = 2000, --1000
 		target_resense_t = 20 --15

@@ -1,22 +1,10 @@
---Graze for all
+--Graze for all and Wanted effect by hoppip
 SniperGrazeDamage = SniperGrazeDamage or {}
-
-function SniperGrazeDamage:on_weapon_fired(weapon_unit, result)
-	if not alive(weapon_unit) then
-		return
-	end
-
---Stock code start
-	-- if not weapon_unit:base():is_category("snp") then
-		-- return
-	-- end
-
-	if weapon_unit ~= managers.player:equipped_weapon_unit() then
-		return
-	end
---Stock code end
-
---Modding start
+local TRAIL_EFFECT = Idstring("effects/particles/weapons/sniper_trail")
+local idstr_trail = Idstring("trail")
+local idstr_simulator_length = Idstring("simulator_length")
+local idstr_size = Idstring("size")
+local trail_length
 --[[
 grenade_launcher
 saw
@@ -32,82 +20,98 @@ lmg
 smg
 pistol
 ]]
-	if not weapon_unit:base():is_category("minigun", "assault_rifle", "snp", "lmg") then
+function SniperGrazeDamage:on_weapon_fired(weapon_unit, result)
+	if not alive(weapon_unit) or not weapon_unit:base():is_category("snp") or weapon_unit ~= managers.player:equipped_weapon_unit() or not result.hit_enemy then
 		return
 	end
---Modding end
-
-	if not result.hit_enemy then
-		return
-	end
-
-	if not result.rays then
+		
+	local player_unit = managers.player:player_unit()
+	if not player_unit then
 		return
 	end
 
-	local furthest_hit = result.rays[#result.rays]
 	local upgrade_value = managers.player:upgrade_value("snp", "graze_damage")
-	local enemies_hit = {}
-	local best_damage = 0
 	local sentry_mask = managers.slot:get_mask("sentry_gun")
 	local ally_mask = managers.slot:get_mask("all_criminals")
+	local enemy_mask = managers.slot:get_mask("enemies")
+	local geometry_mask = managers.slot:get_mask("world_geometry")
+	local hit_enemies = {}
+	local ignored_enemies = {}
 
-	for i, hit in ipairs(result.rays) do
+	for _, hit in ipairs(result.rays) do
 		local is_turret = hit.unit:in_slot(sentry_mask)
 		local is_ally = hit.unit:in_slot(ally_mask)
-		local is_valid_hit = hit.damage_result and hit.damage_result.attack_data and true or false
 
-		if not is_turret and not is_ally and is_valid_hit then
-			local result = hit.damage_result
-			local attack_data = result.attack_data
-			local headshot_kill = attack_data.headshot and (result.type == "death" or result.type == "healed")
-			local damage_mul = headshot_kill and upgrade_value.damage_factor_headshot or upgrade_value.damage_factor
-			local damage = attack_data.damage * damage_mul
-
-			if best_damage < damage then
-				best_damage = damage
-			end
-
-			enemies_hit[hit.unit:key()] = true
+		local result = hit.damage_result
+		local attack_data = result and result.attack_data
+		if attack_data and attack_data.headshot and not is_turret and not is_ally then
+			local multiplier = (result.type == "death" or result.type == "healed") and upgrade_value.damage_factor_kill or upgrade_value.damage_factor
+			local key = hit.unit:key()
+			hit_enemies[key] = {
+				position = hit.position,
+				damage = attack_data.damage * multiplier
+			}
+			ignored_enemies[key] = true
 		end
 	end
+		
+	local radius = upgrade_value.radius
+	for _, hit in pairs(hit_enemies) do
+		self:find_closest_hit(hit, ignored_enemies, upgrade_value, enemy_mask, geometry_mask, player_unit, upgrade_value.times)
+	end
+		
+end
 
-	if best_damage == 0 then
+function SniperGrazeDamage:find_closest_hit(hit, ignored_enemies, upgrade_value, enemy_mask, geometry_mask, player_unit, times)
+	if times <= 0 then
 		return
 	end
-
-	local radius = upgrade_value.radius
-	local from = mvector3.copy(furthest_hit.position)
-	local stopped_by_geometry = furthest_hit.unit:in_slot(managers.slot:get_mask("world_geometry"))
-	local distance = stopped_by_geometry and furthest_hit.distance - radius * 2 or weapon_unit:base():weapon_range() - radius
-
-	mvector3.add_scaled(from, furthest_hit.ray, -furthest_hit.distance)
-	mvector3.add_scaled(from, furthest_hit.ray, radius)
-
-	local to = mvector3.copy(from)
-
-	mvector3.add_scaled(to, furthest_hit.ray, distance)
-
-	--local hits = World:raycast_all("ray", from, to, "sphere_cast_radius", radius, "disable_inner_ray", "slot_mask", managers.slot:get_mask("enemies", "civilians"))
-	local hits = World:raycast_all("ray", from, to, "sphere_cast_radius", radius, "disable_inner_ray", "slot_mask", managers.slot:get_mask("enemies"))
-
-	for i, hit in ipairs(hits) do
-		local key = hit.unit:key()
-
-		if not enemies_hit[key] then
-			hits[key] = hits[key] or hit
+	DelayedCalls:Add("grazehit" .. tostring(hit), 0.05, function ()
+		local hit_units = World:find_units_quick("sphere", hit.position, upgrade_value.radius, enemy_mask)
+		local closest
+		local closest_d_sq = math.huge
+		for _, unit in ipairs(hit_units) do
+			if not ignored_enemies[unit:key()] then
+				local d_s = mvector3.distance_sq(hit.position, unit:movement():m_head_pos())
+				if d_s < closest_d_sq and not World:raycast("ray", hit.position, unit:movement():m_head_pos(), "slot_mask", geometry_mask) then
+					closest = unit
+					closest_d_sq = d_s
+				end
+			end
 		end
 
-		hits[i] = nil
-	end
+		if not closest then
+			return
+		end
 
-	for _, hit in pairs(hits) do
-		hit.unit:character_damage():damage_simple({
-			variant = "graze",
-			damage = best_damage,
-			attacker_unit = managers.player:player_unit(),
-			pos = hit.position,
-			attack_dir = -hit.normal
+		ignored_enemies[closest:key()] = true
+		local hit_pos = Vector3()
+		mvector3.set(hit_pos, closest:movement():m_head_pos())
+
+		if not trail_length then
+			trail_length = World:effect_manager():get_initial_simulator_var_vector2(TRAIL_EFFECT, idstr_trail, idstr_simulator_length, idstr_size)
+		end
+		local trail = World:effect_manager():spawn({
+			effect = Idstring("effects/particles/weapons/sniper_trail"),
+			position = hit.position,
+			normal = hit_pos - hit.position
 		})
-	end
+		mvector3.set_y(trail_length, math.sqrt(closest_d_sq))
+		World:effect_manager():set_simulator_var_vector2(trail, idstr_trail, idstr_simulator_length, idstr_size, trail_length)
+
+		local result = closest:character_damage():damage_simple({
+			variant = "graze",
+			damage = hit.damage,
+			attacker_unit = player_unit,
+			pos = hit_pos,
+			attack_dir = hit_pos - hit.position
+		})
+
+		hit = {
+			position = hit_pos,
+			damage = hit.damage
+		}
+		
+		self:find_closest_hit(hit, ignored_enemies, upgrade_value, enemy_mask, geometry_mask, player_unit, times - 1)
+	end)
 end

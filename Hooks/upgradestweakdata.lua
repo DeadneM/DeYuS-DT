@@ -52,9 +52,16 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "Upgrade_Tweaks", function
 	self.values.player.convert_enemies_max_minions = {2, 4} --{1, 2}
 
 --Graze
+	--[[Value for vanilla graze code
 	self.values.snp.graze_damage = {
 		{radius = 100, damage_factor = 0.2, damage_factor_headshot = 0.2},
 		{radius = 80, damage_factor = 0.4, damage_factor_headshot = 0.8} --{radius = 100, damage_factor = 0.2, damage_factor_headshot = 1}
+	}
+	]]
+	--[[Value for Wanted graze code]]
+	self.values.snp.graze_damage = {
+		{radius = 200, times = 4, damage_factor = 0.25, damage_factor_kill = 0.35},
+		{radius = 400, times = 8, damage_factor = 0.35, damage_factor_kill = 0.95}
 	}
 
 --Dodge and Crouch

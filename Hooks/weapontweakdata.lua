@@ -1370,7 +1370,7 @@ self.wa2000.kick.steelsight = { 1.9, 2.1, -0.1, 0.1 }
 
 self.tti.CLIP_AMMO_MAX = 20
 self.tti.AMMO_MAX = 80
-self.tti.stats.damage = 100
+self.tti.stats.damage = 120
 self.tti.stats.spread = 20
 self.tti.stats.spread_moving = 16
 self.tti.fire_mode_data.fire_rate = 0.10909
